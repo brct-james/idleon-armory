@@ -1,0 +1,67 @@
+$character-select-color: #d4d4d4
+.character-selector
+	display: block
+	font-size: 14px	
+	text-align: center
+	background-color: $character-select-color
+	height: 4.5em
+	width: 16.5em
+	padding: 0.75em 0.25em
+	border-radius: 4px 4px 0 0
+	display: flex
+	flex-direction: column
+	align-items: center
+.character-container
+	margin: 0 0 0.5em 0 
+	padding: 0 
+	width: 15em 
+.no-list-style
+	list-style-type: none
+.dropdown
+	position: relative
+	background-color: $character-select-color
+	top: -0.5em
+	padding: 1em
+	border-radius: 0 0 4px 4px
+.dropdown-hide
+	display: none
+.character 
+	cursor: pointer 
+	position: relative 
+	left: 0 
+	background-color: #EEE 
+	margin: .5em 
+	padding: .3em 0 
+	height: 1.6em 
+	border-radius: 4px 
+	font-weight: bold
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: space-between
+	&:hover 
+		color: #607D8B 
+		background-color: #DDD 
+		left: .1em 
+	&.selected 
+		background-color: #CFD8DC 
+		color: white 
+		&:hover 
+			background-color: #BBD8DC 
+			color: white 
+.badge 
+	display: inline-block 
+	font-size: 12px 
+	color: white 
+	padding: 0.8em 0.7em 0 0.7em 
+	background-color: #405061 
+	line-height: 1em 
+	height: 1.8em 
+	margin-right: .8em 
+	border-radius: 4px 0 0 4px 
+.end-badge 
+	float: right
+	left: 0px
+	margin-right: 0
+	margin-left: .8em 
+	border-radius: 0 4px 4px 0 

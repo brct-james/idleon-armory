@@ -1,0 +1,27 @@
+<div class="character-selector noselect">
+    <strong>Active Character</strong>
+    <div class="character-container">
+        <div
+        class="character"
+        (click)="toggleDropdown()">
+            <span class="badge">{{selectedChar.id}}</span>
+            <span>{{selectedChar.name}}</span>
+            <span class="badge end-badge">Lv {{selectedChar.level}}</span>
+        </div>
+    </div>
+    <ul
+    class="character-container no-list-style dropdown"
+    [class.dropdown-hide]="dropdown === false">
+        <ng-container *ngFor="let char of characters"> 
+            <li
+            class="character"
+            *ngIf="char !== selectedChar"
+            (click)="onSelect(char)"
+            [class.selected]="char === selectedChar">
+                <span class="badge">{{char.id}}</span>
+                <span>{{char.name}}</span>
+                <span class="badge end-badge">Lv {{char.level}}</span>
+            </li>
+        </ng-container>
+    </ul>
+</div>
