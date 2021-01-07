@@ -8,25 +8,23 @@ import { CharacterService } from '../character.service';
   styleUrls: ['./character-selector.component.sass']
 })
 export class CharacterSelectorComponent implements OnInit {
-  characters: Character[];
-  selectedChar: Character;
   dropdown = false;
 
   constructor(private characterService: CharacterService) { }
 
-  ngOnInit(): void {
-    this.getCharacters();
-    this.selectedChar = this.characters[0];
+  ngOnInit(): void { }
+
+  get characters(): Character[] {
+    return this.characterService.characterList;
   }
 
-  getCharacters(): void {
-    this.characterService.getCharacters()
-      .subscribe(characters => this.characters = characters);
+  get selectedChar(): Character {
+    return this.characterService.activeChar;
   }
 
-  onSelect(char: Character): void {
-    this.selectedChar = char;
-    this.toggleDropdown()
+  onSelect(target: Character): void {
+    this.characterService.setActive(target);
+    this.toggleDropdown();
   }
 
   toggleDropdown(): void {

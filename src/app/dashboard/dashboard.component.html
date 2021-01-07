@@ -1,8 +1,47 @@
-<h3>Dashboard</h3>
-<div class="grid grid-pad">
-  <!-- <a *ngFor="let hero of heroes" class="col-1-4">
-    <div class="module hero">
-      <h4>{{hero.name}}</h4>
+<h2>Dashboard</h2>
+<div id="charListView">
+  <h3>List of Characters</h3>
+  <div class="centerText">
+    <span>Account Level: {{accountLevel}}</span>
+  </div>
+  <div class="centerText">
+    <em>(Sum of all characters' Main Levels)</em>
+  </div>
+  <div class="grid grid-pad">
+    <div *ngFor="let char of characters" class="col-1-4">
+      <div class="module" routerLink="/character">
+        <div>
+          <input class="nameInput" (input)="onNameChange($event.target, char)" value="{{char.name}}"/>
+        </div>
+        <div>
+          <!-- <span>{{char.class}} (Lv <input class="levInput" type=number [(ngModel)]="char.level" value="{{char.level}}"/>)</span> -->
+          <span>{{char.class}} (Lv {{char.level}})</span>
+        </div>
+      </div>
+      <div class="charListOptions noselect">
+        <div
+        [class.active]="activeCharacter === char"
+        (click)="activate(char)">
+          <span *ngIf="activeCharacter !== char">Set </span>
+          Active
+        </div>
+        <div class="active">
+          Reorder
+        </div>
+        <div (click)="delete(char)">
+          Delete
+        </div>
+      </div>
     </div>
-  </a> -->
+    <div class="col-1-4 noselect">
+      <div
+      id="addCharPlaceholder"
+      (click)="addNewChar()"
+      [class.cantCreate]="accountLevel < nextSlotReq">
+        <span>Character #{{characters.length + 1}}</span>
+        <span class="plus">+</span>
+        <span>Need {{nextSlotReq}} Account Level</span>
+      </div>
+    </div>
+  </div>
 </div>

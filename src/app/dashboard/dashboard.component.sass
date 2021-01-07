@@ -8,28 +8,126 @@ a
 	text-decoration: none 
 *, *::after, *::before 
 	box-sizing: border-box 
-h3 
+h2, h3 
 	text-align: center 
 	margin-bottom: 0 
-h4 
-	position: relative 
+em
+	font-size: 0.8em
 .grid 
 	margin: 0 
 .col-1-4 
-	width: 25% 
+	width: 25%
+.centerText
+	text-align: center 
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
+	-webkit-appearance: none
+	margin: 0
+input[type=number]
+	-moz-appearance: textfield
 .module 
-	padding: 20px 
+	padding: 15% 
 	text-align: center 
 	color: #eee 
-	max-height: 120px 
+	max-height: 100px 
+	min-height: 40px
 	min-width: 120px 
 	background-color: #3f525c 
-	border-radius: 2px 
-	min-width: 60px 
+	border-radius: 4px 4px 0 0 
+	min-width: 80px 
+	display: flex
+	flex-direction: column
+	align-item: center
+	justify-content: center
 	&:hover 
 		background-color: #eee 
 		cursor: pointer 
-		color: #607d8b 
+		color: #607d8b
+		input
+			background-color: #eee 
+			color: #607d8b
+			border-bottom: 1px solid #607d8b
+			&:hover
+				background-color: #3f525c
+				color: #eee
+			&:focus
+				background-color: #3f525c
+				color: #eee
+				outline: none
+	input
+		font-weight: bold
+		font-size: 1.1em
+		background-color: #3f525c
+		color: #eee
+		border: none
+		border-bottom: 1px solid #eee
+		&:hover
+			background-color: #eee
+			color: #3f525c
+		&:focus
+			background-color: #eee
+			color: #3f525c
+			outline: none
+.nameInput
+	width: 100%
+	text-align: center
+	margin-bottom: 0.5em
+.levInput
+	text-align: center
+	width: 2em
+.charListOptions
+	display: flex
+	flex-direction: row
+	div
+		flex-grow: 1
+		padding: 0.5em 0.5em
+		background-color: #5085a0
+		color: #eee
+		font-weight: bold
+		text-align: center
+		&:hover
+			background-color: #375f74
+			cursor: pointer
+		&:first-child
+			border-radius: 0 0 0 4px
+			border-right: 1px solid #3f525c
+		&:last-child
+			border-radius: 0 0 4px 0
+			border-left: 1px solid #3f525c
+	.active
+		background-color: #375f74
+		cursor: not-allowed !important
+.cantCreate
+	background-color: #eeeeee !important
+	color: #e42a2a !important
+	border: 6px dashed #e42a2a !important
+	&:hover
+		color: #eeeeee !important
+		background-color: #e42a2a !important
+		cursor: not-allowed !important
+		border: 6px dashed #eee !important
+#addCharPlaceholder
+	border: 6px dashed #607d8b
+	background-color: #eee
+	color: #607d8b
+	padding: 15%
+	max-height: 100px
+	min-height: 40px
+	text-align: center
+	min-width: 120px 
+	border-radius: 4px 
+	min-width: 80px
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	&:hover
+		background-color: #d1d1d1
+		color: #607d8b
+		cursor: pointer
+	.plus
+		font-size: 5em
+		font-weight: bold
+		line-height: 0.5em
 .grid-pad 
 	padding: 10px 0 
 	& > [class*='col-']:last-of-type 
@@ -41,3 +139,11 @@ h4
 @media (max-width: 1024px) 
 	.grid
 		margin: 0 
+@media(max-width: 758px)
+	#addCharPlaceholder
+		&::after
+			font-size: 3em
+@media(max-width: 449px)
+	#addCharPlaceholder
+		&::after
+			font-size: 2em

@@ -1,6 +1,7 @@
 import { Item } from './Item';
 import { Talent } from './Talent';
 import { SkillInfo } from './SkillInfo';
+import { TalentTab } from './TalentTab';
 
 export interface Character {
     id: number;
@@ -12,9 +13,5 @@ export interface Character {
         contents: Item[];
     }
     skills: SkillInfo[];
-    talents: {
-        pointsMax: number;
-        pointsRemaining: number;
-        owned: Talent[];
-    }
+    talentTabs: TalentTab[];
 }

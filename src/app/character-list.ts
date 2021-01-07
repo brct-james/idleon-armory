@@ -2,7 +2,7 @@ import { Character } from './Character';
 
 export const CHARACTERS: Character[] = [
     {
-        id: 0,
+        id: 1,
         name: "AlphaUser",
         level: 20,
         class: "Archer",
@@ -11,14 +11,20 @@ export const CHARACTERS: Character[] = [
             contents: []
         },
         skills: [],
-        talents: {
-            pointsMax: 60,
-            pointsRemaining: 60,
+        talentTabs: [{
+            name: "Beginner",
+            pointsMax: 100,
+            pointsRemaining: 100,
             owned: []
-        }
+        }, {
+            name: "Beginner2",
+            pointsMax: 100,
+            pointsRemaining: 100,
+            owned: []
+        }]
     },
     {
-        id: 1,
+        id: 2,
         name: "BetaUser",
         level: 9,
         class: "Beginner",
@@ -27,14 +33,15 @@ export const CHARACTERS: Character[] = [
             contents: []
         },
         skills: [],
-        talents: {
-            pointsMax: 27,
-            pointsRemaining: 27,
+        talentTabs: [{
+            name: "Beginner",
+            pointsMax: 100,
+            pointsRemaining: 100,
             owned: []
-        }
+        }]
     },
     {
-        id: 2,
+        id: 3,
         name: "GammaUser",
         level: 1,
         class: "Beginner",
@@ -43,10 +50,28 @@ export const CHARACTERS: Character[] = [
             contents: []
         },
         skills: [],
-        talents: {
-            pointsMax: 3,
-            pointsRemaining: 3,
+        talentTabs: [{
+            name: "Beginner",
+            pointsMax: 100,
+            pointsRemaining: 100,
             owned: []
-        }
+        }]
+    },
+    {
+        id: 4,
+        name: "NewUser",
+        level: 1,
+        class: "Beginner",
+        inventory: {
+            unlockedSlots: 16,
+            contents: []
+        },
+        skills: [],
+        talentTabs: [{
+            name: "Beginner",
+            pointsMax: 100,
+            pointsRemaining: 100,
+            owned: []
+        }]
     }
 ];

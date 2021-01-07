@@ -1,6 +1,7 @@
 h1 
 	font-size: 2em 
-	margin: auto 1em
+	margin: auto 0.5em
+	text-align: center
 nav 
 	display: flex
 	flex-direction: row
@@ -24,3 +25,12 @@ nav
 			color: #039be5 
 nav a:visited, a:link 
 	color: #334953 
+@media(max-width: 758px)
+	nav
+		position: relative
+		margin-bottom: 60px
+		div
+			position: absolute
+			top: 86px
+			a
+				border-radius: 0 0 4px 4px 
