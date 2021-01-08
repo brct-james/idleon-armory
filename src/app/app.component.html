@@ -1,10 +1,10 @@
 <nav>
     <h1>{{title}}</h1>
-    <div>
-        <a routerLink="/">Dashboard</a>
-        <a routerLink="/character">Character</a>
-        <a routerLink="/items">Items</a>
-        <a routerLink="/talents">Talents</a>
+    <div class="navLinks">
+        <a routerLink="/" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Dashboard</a>
+        <a routerLink="/character" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Character</a>
+        <a routerLink="/equipment" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Equipment</a>
+        <a routerLink="/talents" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Talents</a>
     </div>
     <app-character-selector></app-character-selector>
 </nav>

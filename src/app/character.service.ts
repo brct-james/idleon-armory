@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { Character } from './Character';
 import { CHARACTERS } from './character-list';
 import { BehaviorSubject } from 'rxjs';
+import {LocalStorageService} from 'ngx-webstorage';
+
+import isEqual from 'lodash.isequal';
 
 @Injectable({
   providedIn: 'root'
@@ -10,43 +13,70 @@ export class CharacterService {
   characterList: Character[];
   activeChar: Character;
 
-  activeCharChange: BehaviorSubject<Character> = new BehaviorSubject<Character>(CHARACTERS[0]);
-  charListChange: BehaviorSubject<Character[]> = new BehaviorSubject<Character[]>(CHARACTERS);
+  activeCharChange: BehaviorSubject<Character>;
+  charListChange: BehaviorSubject<Character[]>;
 
-  constructor() {
-    this.activeCharChange.subscribe((value) => {
-      this.activeChar = value;
-    });
+  constructor(private localStorage:LocalStorageService) {
+    let retrievedCharList = this.getStored("characterList");
+    let retrievedActiveChar = this.getStored("activeChar");
+    
+    //TODO: Replaces CHARACTERS with the default new character for new users
+    this.charListChange = new BehaviorSubject<Character[]>(retrievedCharList ? retrievedCharList : CHARACTERS);
+    this.activeCharChange = new BehaviorSubject<Character>(retrievedActiveChar ? retrievedActiveChar : CHARACTERS[0]);
+
     this.charListChange.subscribe((value) => {
       this.characterList = value;
     });
+    this.activeCharChange.subscribe((value) => {
+      this.activeChar = value;
+    });
+  }
+
+  clearStorage() {
+    this.localStorage.clear();
+    this.setChars(CHARACTERS);
+    this.setActive(CHARACTERS[0]);
+  }
+
+  getStored(key: string): any {
+    return this.localStorage.retrieve(key);
+  }
+
+  saveChangesToStorage(): void {
+    this.localStorage.store("activeChar", this.activeChar);
+    this.localStorage.store("characterList", this.characterList);
   }
 
   setChars(chars: Character[]) {
-    console.log("setChars", chars)
+    this.charListChange.next(chars)
   }
 
   updateCharacterProperty(target: Character, propertyName: string, newValue: any): void {
     let result = this.characterList.map(character => {
-      if (character === target) {
+      if (isEqual(character, target)) {
         character[propertyName] = newValue;
       }
       return character;
     });
-    this.charListChange.next(result)
+    this.charListChange.next(result);
+    this.saveChangesToStorage();
   }
 
   setActive(target: Character): void {
     this.activeCharChange.next(target);
+    this.saveChangesToStorage();
   }
 
   addChar(target: Character): void {
     this.charListChange.next(this.characterList.concat(target));
+    this.saveChangesToStorage();
   }
 
   delChar(target: Character): void {
-    this.charListChange.next(this.characterList.filter(char => char !== target));
-    if (target === this.activeChar) {
+    let delTarget = this.characterList.filter(char => isEqual(char, target))[0];
+    let delIdx = this.characterList.indexOf(delTarget);
+    this.charListChange.next(this.characterList.filter((char, index) => { console.log(char.id, index, delIdx, index >= delIdx); char.id = index >= delIdx ? char.id - 1 : char.id; return !isEqual(char, target) }));
+    if (isEqual(target, this.activeChar)) {
       let newActiveChar: Character = {
         id: -1,
         name: "undefined",
@@ -64,5 +94,6 @@ export class CharacterService {
       }
       this.activeCharChange.next(newActiveChar);
     }
+    this.saveChangesToStorage();
   }
 }

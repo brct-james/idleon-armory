@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Character } from '../Character';
 import { CharacterService } from '../character.service';
 
+import isEqual from 'lodash.isequal';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -10,7 +12,9 @@ import { CharacterService } from '../character.service';
 export class DashboardComponent implements OnInit {
   constructor( private characterService: CharacterService ) { }
 
-  ngOnInit() { }
+  isEqual = isEqual
+
+  ngOnInit(): void { }
 
   get characters(): Character[] {
     return this.characterService.characterList;
@@ -33,6 +37,10 @@ export class DashboardComponent implements OnInit {
   get nextSlotReq(): Number {
     const slotRequirements = [0, 8, 30, 60, 130, 225, 330, 470, 600, 760, 950, 1100];
     return slotRequirements[this.characters.length];
+  }
+
+  clearStorage() {
+    this.characterService.clearStorage();
   }
 
   onNameChange(target, char) { 

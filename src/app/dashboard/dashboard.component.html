@@ -1,4 +1,4 @@
-<h2>Dashboard</h2>
+<h2>Dashboard: <span id="reset" (click)="clearStorage()">ResetCharsToDefault</span></h2>
 <div id="charListView">
   <h3>List of Characters</h3>
   <div class="centerText">
@@ -7,22 +7,21 @@
   <div class="centerText">
     <em>(Sum of all characters' Main Levels)</em>
   </div>
-  <div class="grid grid-pad">
-    <div *ngFor="let char of characters" class="col-1-4">
-      <div class="module" routerLink="/character">
+  <div class="characterList">
+    <div *ngFor="let char of characters" class="charCardContainer">
+      <div class="module" (click)="activate(char)" routerLink="/character">
         <div>
-          <input class="nameInput" (input)="onNameChange($event.target, char)" value="{{char.name}}"/>
+          <strong>{{char.name}}</strong>
         </div>
         <div>
-          <!-- <span>{{char.class}} (Lv <input class="levInput" type=number [(ngModel)]="char.level" value="{{char.level}}"/>)</span> -->
           <span>{{char.class}} (Lv {{char.level}})</span>
         </div>
       </div>
       <div class="charListOptions noselect">
         <div
-        [class.active]="activeCharacter === char"
+        [class.active]="isEqual(char, activeCharacter)"
         (click)="activate(char)">
-          <span *ngIf="activeCharacter !== char">Set </span>
+          <span *ngIf="!isEqual(char, activeCharacter)">Set </span>
           Active
         </div>
         <div class="active">
@@ -33,7 +32,7 @@
         </div>
       </div>
     </div>
-    <div class="col-1-4 noselect">
+    <div class="charCardContainer noselect">
       <div
       id="addCharPlaceholder"
       (click)="addNewChar()"

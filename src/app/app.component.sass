@@ -1,36 +1,52 @@
+@import './variables.sass'
+
 h1 
-	font-size: 2em 
-	margin: auto 0.5em
+	font-size: 3em 
+	line-height: 0.8em
+	margin: 0.25em
 	text-align: center
+	color: $main-red
+	font-family: ExpletusSans, Arial
+	font-weight: 700
 nav 
 	display: flex
 	flex-direction: row
 	justify-content: space-between
 	align-items: flex-end
-	border-bottom: solid black 1px
-	div
-		display: flex
-		flex-direction: row
+	border-bottom: solid $main-grey 1px
 	a 
 		margin-right: 1em
 		padding: 1em
 		display: block
 		text-decoration: none 
-		background-color: #eee 
+		background-color: $hover-grey
+		color: $main-grey
+		font-weight: bold
 		border-radius: 4px 4px 0 0 
 		&:hover 
-			color: #039be5 
-			background-color: #cfd8dc 
+			color: $main-white
+			background-color: $main-grey 
 		&.active 
-			color: #039be5 
-nav a:visited, a:link 
-	color: #334953 
+			color: $main-white
+			background-color: $mid-grey
+.navLinks
+	max-width: 98vw
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center
 @media(max-width: 758px)
 	nav
 		position: relative
 		margin-bottom: 60px
-		div
-			position: absolute
-			top: 86px
-			a
-				border-radius: 0 0 4px 4px 
+		a
+			border-radius: 0 0 4px 4px 
+			padding: 0.5em
+			margin-right: 0.5em
+	.navLinks
+		position: absolute
+		top: 86px
+		width: 98vw
+@media(max-width: 449px)
+	.navLinks
+		top: 76px

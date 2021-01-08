@@ -1,0 +1,72 @@
+@import '../variables.sass'
+    
+#charInfoCard
+    font-size: 20px
+    background-color: $main-white
+    padding: 0.5em
+    border: 0.5em solid $main-blue
+    border-radius: 6px
+    max-width: 360px
+    display: flex
+    flex-direction: row
+#charAvatar
+    width: 95px
+    height: 88px
+    overflow: hidden
+    border: 0.25em solid $hover-grey
+    margin-right: 0.5em
+#charAvatar img
+    width: 103px
+    object-position: -4px -5px
+#charInfoSection
+    display: flex
+    flex-grow: 1
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+#charName
+    font-weight: bold
+#charClass
+    font-size: 0.9em
+    font-weight: bold
+    display: flex
+    flex-direction: row
+    align-items: center
+    img
+        padding: 0 0.2em
+    select
+        outline: none
+        font-size: 1em
+        border: 1px solid $hover-grey
+        font-weight: bold
+        background-color: $main-white
+        color: $main-grey
+#charMainLevel
+    margin-top: 0.25em
+    font-weight: bold
+    font-size: 0.9em
+.nameInput
+    width: 9em
+    text-align: center
+    margin-bottom: 0.5em
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+input[type=number]
+    -moz-appearance: textfield
+.levInput
+    text-align: center
+    width: 2em
+input
+    font-weight: bold
+    font-size: 1.1em
+    background-color: $main-white
+    color: $main-grey
+    border: none
+    border-bottom: 1px solid $main-grey
+    &:hover
+        background-color: $highlight-grey
+    &:focus
+        background-color: $highlight-grey
+        outline: none
+    

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Character } from '../Character';
+import { CharacterService } from '../character.service';
+import { Class } from '../Class';
 
 @Component({
   selector: 'app-character-information',
@@ -6,10 +9,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./character-information.component.sass']
 })
 export class CharacterInformationComponent implements OnInit {
+  constructor( private characterService: CharacterService ) { }
 
-  constructor() { }
+  ngOnInit(): void { }
 
-  ngOnInit(): void {
+  get activeCharacter(): Character {
+    return this.characterService.activeChar;
+  }
+
+  get listOfClasses(): string[] {
+    return ["Archer", "Beginner"];
+  }
+
+  onNameChange(target) { 
+    this.characterService.updateCharacterProperty(this.activeCharacter, "name", target.value);
+  }
+
+  onLevChange(target) { 
+    this.characterService.updateCharacterProperty(this.activeCharacter, "level", Number(target.value));
+  }
+
+  onClassChange(target) {
+    this.characterService.updateCharacterProperty(this.activeCharacter, "class", target.value);
   }
 
 }
