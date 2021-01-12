@@ -1,0 +1,34 @@
+<div id="{{category.name}}UIContainer" class="relativeContainer">
+    <img src="assets/images/UI/Equipment/InventoryEquipment.png" id="equipmentBase" draggable='false'/>
+    <div class="equipablesContainer">
+        <div *ngFor="let slot of category.slots" class="equipDropdown dropdown" id="{{camelize(slot+'SlotEquipDropdown')}}">
+            <img src="assets/images/UI/Equipment/{{camelize(slot)}}Slot.png" draggable="false" id="{{camelize(slot+'SlotImage')}}">
+            <div class="dropdown-content" id="{{camelize(slot+'Slot')}}">
+                {{slot}}
+                <div
+                *ngFor="let item of filterItems(slot)"
+                id="{{camelize(item.name)}}DDItem{{camelize(slot)}}Slot"
+                class="equipmentDropdownContainer"
+                (click)='ddItemClicked($event, item)'>
+                    <div class="ItemDescriptionBox">
+                        <div class="flexRowDirection">
+                            <div class="ItemHighlightBox">
+                                <img src="assets/images/Items/Equipment/{{item.name}}.png" class="equipDDItemImage" draggable="false">
+                            </div>
+                            <div class="ItemInfoBox">
+                                <span class="equipDDItemName textShadow noselect">{{item.name}}</span>
+                                <span class="equipDDItemRestrictions textShadow noselect">{{item.restrictions}}</span>
+                            </div>
+                        </div>
+                        <div *ngIf="item.description" class="itemsHozLine"></div>
+                        <span class="equipDDItemText noselect">{{item.description}}</span>
+                        <div class="itemsHozLine"></div>
+                        <div class="equipDDItemAttrText">
+                            <span *ngFor="let attr of item.attributes | keyvalue" class="noselect">{{attr.key}}: {{attr.value}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,11 @@
-<p>equipment works!</p>
+<app-character-information></app-character-information>
+<h2>Equipment</h2>
+<div>
+    <div id="BISEquipsContainer" *ngIf="categories && items && activeCharacter">
+        <app-equipment-category
+        *ngFor="let category of categories"
+        [category]="category"
+        [items]="items"
+        [char]="activeCharacter"></app-equipment-category>
+    </div>
+</div>

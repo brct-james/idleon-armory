@@ -1,0 +1,141 @@
+{
+    "categories": [
+        {
+            "name": "Equipment",
+            "slots": [
+                "Head",
+                "Weapon",
+                "Torso",
+                "Neck",
+                "Leg",
+                "Ring 1",
+                "Feet",
+                "Ring 2"
+            ]
+        },
+        {
+            "name": "Tools",
+            "slots": [
+                "Pickaxe",
+                "Hatchet",
+                "Rod",
+                "Net",
+                "Placeholder Tool 5",
+                "Placeholder Tool 6",
+                "Placeholder Tool 7",
+                "Placeholder Tool 8"
+            ]
+        },
+        {
+            "name": "Food",
+            "slots": [
+                "Food 1",
+                "Food 2",
+                "Placeholder Food 3",
+                "Placeholder Food 4",
+                "Placeholder Food 5",
+                "Placeholder Food 6",
+                "Placeholder Food 7",
+                "Placeholder Food 8"
+            ]
+        },
+        {
+            "name": "Special",
+            "slots": [
+                "Premium Head",
+                "Placeholder Special 2",
+                "Trophy",
+                "Placeholder Special 4",
+                "Placeholder Special 5",
+                "Chat Ring",
+                "Placeholder Special 7",
+                "Placeholder Special 8"
+            ]
+        }
+    ],
+    "items": [
+        {
+            "name": "Boxing Gloves",
+            "slots": ["Weapon"],
+            "type": "Fisticuff",
+            "requirements": {
+                "Class": "All",
+                "Main Level": 2
+            },
+            "attributes": {
+                "Speed": 6,
+                "Weapon Power": 4,
+                "STR": 2,
+                "LUK": 2,
+                "Reach": 55
+            },
+            "description": ""
+        },
+        {
+            "name": "The Stingers",
+            "slots": ["Weapon"],
+            "type": "Fisticuff",
+            "requirements": {
+                "Class": "All",
+                "Main Level": 6
+            },
+            "attributes": {
+                "Speed": 5,
+                "Weapon Power": 11,
+                "STR": 5,
+                "LUK": 5,
+                "Reach": 60,
+                "Upgrade Slots": 2
+            },
+            "description": ""
+        },
+        {
+            "name": "Bandage Wraps",
+            "slots": ["Weapon"],
+            "type": "Fisticuff",
+            "requirements": {
+                "Class": "Beginner",
+                "Main Level": 25
+            },
+            "attributes": {
+                "Speed": 7,
+                "Weapon Power": 20,
+                "STR": 6,
+                "LUK": 10,
+                "Reach": 65,
+                "Upgrade Slots": 3
+            },
+            "description": ""
+        },
+        {
+            "name": "Flesh Reaper",
+            "slots": ["Weapon"],
+            "type": "Spear",
+            "requirements": {
+                "Class": "All",
+                "Main Level": 1,
+                "Unobtainable": true
+            },
+            "attributes": {
+                "Speed": 5,
+                "Weapon Power": 400,
+                "AGI": 80,
+                "LUK": 10,
+                "Reach": 70
+            },
+            "description": ""
+        },
+        {
+            "name": "Hot Dog",
+            "slots": ["Food 1", "Food 2"],
+            "type": "Health Food",
+            "requirements": {},
+            "attributes": {
+                "Use Percentage": 0.5,
+                "HP Restoration Amount": 50,
+                "Cooldown": 30
+            },
+            "description": "Auto-Used when your health goes below 50%.\nRestores 50HP.\nHas a 30 second Cooldown."
+        }
+    ]
+}

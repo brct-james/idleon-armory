@@ -6,13 +6,14 @@
         </div>
         <div id="charInfoSection">
             <div id="charName"><input (focus)="$event.target.select()" maxlength="16" class="nameInput" (input)="onNameChange($event.target)" value="{{activeCharacter.name}}"/></div>
-            <div id="charClass"><img src='{{ "assets/images/TalentTabs/TabIcons/" + activeCharacter.class + ".png"}}' /><select (change)="onClassChange($event.target)">
+            <div id="charClass">
+                <img src='{{ "assets/images/TalentTabs/TabIcons/" + activeCharacter.class + ".png"}}' />
+                <select (change)="onClassChange($event.target)">
                 <option *ngFor="let class of listOfClasses" [selected]="class === activeCharacter.class">{{class}}</option>
-            </select> <img src='{{ "assets/images/TalentTabs/TabIcons/" + activeCharacter.class + ".png"}}' /></div>
+                </select>
+                <img src='{{ "assets/images/TalentTabs/TabIcons/" + activeCharacter.class + ".png"}}' />
+            </div>
             <div id="charMainLevel">Main Lv <input (focus)="$event.target.select()" class="levInput" type="number" (input)="onLevChange($event.target)" value="{{activeCharacter.level}}"/></div>
         </div>
     </div>
-  <div>
-
-  </div>
 </div>

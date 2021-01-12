@@ -48,17 +48,18 @@ export class CharacterService {
   }
 
   setChars(chars: Character[]) {
-    this.charListChange.next(chars)
+    this.charListChange.next(chars);
+    this.setActive(chars[this.activeChar.id-1]);
   }
 
-  updateCharacterProperty(target: Character, propertyName: string, newValue: any): void {
+  updateCharacterProperty(targetID: Number, propertyName: string, newValue: any): void {
     let result = this.characterList.map(character => {
-      if (isEqual(character, target)) {
+      if (isEqual(character.id, targetID)) {
         character[propertyName] = newValue;
       }
       return character;
     });
-    this.charListChange.next(result);
+    this.setChars(result);
     this.saveChangesToStorage();
   }
 

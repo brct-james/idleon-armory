@@ -1,0 +1,120 @@
+.relativeContainer
+    position: relative
+    padding: 0 5px 0 0
+.equipablesContainer
+    position: absolute
+    top: 63px
+    left: 13px
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    width: 188px
+.equipDropdown
+    margin: 2px 0 0 6px
+    width: 72px
+    height: 72px
+.equipDropdown>img:hover 
+    cursor: pointer
+.equipDropdown:hover>img
+    filter: brightness(1.5)
+.dropdown
+    position: relative
+    display: inline-block
+.dropdown-content
+    display: none
+    position: absolute
+    top: 36px
+    /* 72px w/ 0 left is good for below */
+    -webkit-transform: translateY(-50%)
+    transform: translateY(-50%)
+    left: 72px
+    background-color: rgba(129, 130, 174, 0.9)
+    color: white
+    max-height: 500px
+    overflow-y: auto
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2)
+    padding: 12px 12px 0px 12px
+    z-index: 1
+.dropdown:hover .dropdown-content 
+    display: block
+.equipmentDropdownContainer
+    position: relative
+    filter: saturate(0)
+.equipmentDropdownContainer.active
+    filter: saturate(1)
+.equipmentDropdownContainer:hover
+    filter: brightness(1.25)
+    cursor: pointer
+.placeholderSlot
+  *
+    cursor: not-allowed !important
+
+  &:hover .dropdown-content
+    display: none
+
+  > img
+    margin: 4px 0 0 4px
+    width: 64px
+    height: 64px
+
+.ItemDescriptionBox
+  width: 240px
+  min-height: 100px
+  background-color: rgb(0, 1, 66)
+  display: flex
+  flex-direction: column
+  margin-bottom: 10px
+
+.itemsHozLine
+  margin: 5px auto
+  height: 1px
+  width: 90%
+  background-color: white
+
+.ItemHighlightBox
+  background-color: rgb(127, 150, 153)
+  width: 76px
+  height: 76px
+  display: block
+  margin: 12px 0 0 12px
+  -moz-box-shadow: inset 0 0 0 3px rgb(94, 113, 116)
+  -webkit-box-shadow: inset 0 0 0 3px rgb(94, 113, 116)
+  box-shadow: inset 0 0 0 3px rgb(94, 113, 116)
+
+.equipDDItemImage
+  position: relative
+  top: 0px
+  left: 0px
+
+.ItemInfoBox
+  margin: 10px 10px 0 10px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.equipDDItemName
+  vertical-align: top
+
+.equipDDItemRestrictions
+  font-size: 14px
+  white-space: pre-line
+
+.equipDDItemText
+  font-size: 14px
+  margin: 0 10px 8px 10px
+  white-space: pre-line
+  line-height: 20px
+.equipDDItemAttrText
+    font-size: 14px
+    line-height: 20px
+    margin: 0 10px 8px 10px
+    display: flex
+    flex-direction: column
+
+.flexRowDirection
+  display: flex
+  flex-direction: row
+
+.flexColumnDirection
+  display: flex
+  flex-direction: column

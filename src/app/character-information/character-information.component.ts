@@ -22,15 +22,15 @@ export class CharacterInformationComponent implements OnInit {
   }
 
   onNameChange(target) { 
-    this.characterService.updateCharacterProperty(this.activeCharacter, "name", target.value);
+    this.characterService.updateCharacterProperty(this.activeCharacter.id, "name", target.value);
   }
 
   onLevChange(target) { 
-    this.characterService.updateCharacterProperty(this.activeCharacter, "level", Number(target.value));
+    this.characterService.updateCharacterProperty(this.activeCharacter.id, "level", Number(target.value));
   }
 
   onClassChange(target) {
-    this.characterService.updateCharacterProperty(this.activeCharacter, "class", target.value);
+    this.characterService.updateCharacterProperty(this.activeCharacter.id, "class", target.value);
   }
 
 }
