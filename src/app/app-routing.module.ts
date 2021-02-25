@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'character', component: CharacterInformationComponent },
   { path: 'equipment', component: EquipmentComponent },
   { path: 'talents', component: TalentsComponent },
-  { path: 'guides', redirectTo: 'guides/tutorial'},
+  { path: 'guides', redirectTo: 'guides/tutorial', pathMatch: 'full'},
   { path: 'guides', children: [
     { path: "**", component: GuidesComponent }
   ] }
