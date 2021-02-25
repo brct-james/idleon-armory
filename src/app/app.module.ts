@@ -11,7 +11,12 @@ import { CharacterInformationComponent } from './character-information/character
 import { EquipmentComponent } from './equipment/equipment.component';
 import { TalentsComponent } from './talents/talents.component';
 import { EquipmentCategoryComponent } from './equipment-category/equipment-category.component';
-import { GuidesComponent } from './guides/guides.component';
+import { GuideSelectorComponent } from './guide-selector/guide-selector.component';
+import { TutorialComponent } from './guides/tutorial/tutorial.component';
+import { EventsComponent } from './guides/events/events.component';
+import { NewPlayerComponent } from './guides/new-player/new-player.component';
+import { GemsComponent } from './guides/gems/gems.component';
+import { DailiesComponent } from './guides/dailies/dailies.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,12 @@ import { GuidesComponent } from './guides/guides.component';
     EquipmentComponent,
     TalentsComponent,
     EquipmentCategoryComponent,
-    GuidesComponent
+    GuideSelectorComponent,
+    TutorialComponent,
+    EventsComponent,
+    NewPlayerComponent,
+    GemsComponent,
+    DailiesComponent
   ],
   imports: [
     BrowserModule,
