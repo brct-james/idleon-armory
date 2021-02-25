@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Beginner",
+        "familyBonusTextArr": [],
+        "familyBonusFormulae": []
+    },
+    {
+        "name": "Rage Basics",
+        "familyBonusTextArr": [],
+        "familyBonusFormulae": []
+    },
+    {
+        "name": "Warrior",
+        "familyBonusTextArr": ["+", " Total STR"],
+        "familyBonusFormulae": ["intervalAdd(level-famBonusStarts[0], 1, 5)"]
+    },
+    {
+        "name": "Calm Basics",
+        "familyBonusTextArr": [],
+        "familyBonusFormulae": []
+    },
+    {
+        "name": "Archer",
+        "familyBonusTextArr": ["+", " Total AGI"],
+        "familyBonusFormulae": ["intervalAdd(level-famBonusStarts[0], 1, 5)"]
+    },
+    {
+        "name": "Savvy Basics",
+        "familyBonusTextArr": [],
+        "familyBonusFormulae": []
+    },
+    {
+        "name": "Mage",
+        "familyBonusTextArr": ["+", " Total WIS"],
+        "familyBonusFormulae": ["intervalAdd(level-famBonusStarts[0], 1, 5)"]
+    },
+    {
+        "name": "Journeyman Basics",
+        "familyBonusTextArr": [],
+        "familyBonusFormulae": []
+    },
+    {
+        "name": "Journeyman",
+        "familyBonusTextArr": [],
+        "familyBonusFormulae": []
+    },
+    {
+        "name": "Barbarian",
+        "familyBonusTextArr": ["+"," Weapon Power"],
+        "familyBonusFormulae": ["decay(level - famBonusStarts[1], 25, 100).toPrecision(3)"]
+    },
+    {
+        "name": "Squire",
+        "familyBonusTextArr": ["+","% Health"],
+        "familyBonusFormulae": ["decay(level - famBonusStarts[1], 40, 100).toPrecision(3)"]
+    },
+    {
+        "name": "Bowman",
+        "familyBonusTextArr": ["+","% Active Exp"],
+        "familyBonusFormulae": ["decay(level - famBonusStarts[1], 38, 100).toPrecision(3)"]
+    },
+    {
+        "name": "Hunter",
+        "familyBonusTextArr": ["+","% Skill Efficiency"],
+        "familyBonusFormulae": ["decay(level - famBonusStarts[1], 30, 100).toPrecision(3)"]
+    },
+    {
+        "name": "Shaman",
+        "familyBonusTextArr": ["+","% Golden Food Effect"],
+        "familyBonusFormulae": ["decayMulti(level - famBonusStarts[1], 0.4,100).toPrecision(3)"]
+    },
+    {
+        "name": "Wizard",
+        "familyBonusTextArr": ["+"," Special Talent Points"],
+        "familyBonusFormulae": ["intervalAdd(level - famBonusStarts[1], 1,8)"]
+    },
+    {
+        "name": "Specials 1",
+        "familyBonusTextArr": [],
+        "familyBonusFormulae": []
+    }
+]

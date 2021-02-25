@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Character } from '../Character';
 import { CharacterService } from '../character.service';
 import { Class } from '../Class';
+import { JsonService } from '../json.service';
 
 @Component({
   selector: 'app-character-information',
@@ -9,7 +10,7 @@ import { Class } from '../Class';
   styleUrls: ['./character-information.component.sass']
 })
 export class CharacterInformationComponent implements OnInit {
-  constructor( private characterService: CharacterService ) { }
+  constructor( private characterService: CharacterService, private jsonService: JsonService ) { }
 
   ngOnInit(): void { }
 
@@ -18,7 +19,7 @@ export class CharacterInformationComponent implements OnInit {
   }
 
   get listOfClasses(): string[] {
-    return ["Archer", "Beginner"];
+    return this.jsonService.classes ? this.jsonService.classes.filter(cls => cls.isSpoiler === false).map(cls => cls.name) : undefined;
   }
 
   onNameChange(target) { 

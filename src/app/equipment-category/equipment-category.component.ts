@@ -22,7 +22,7 @@ export class EquipmentCategoryComponent implements OnInit {
 
   //Stolen from https://stackoverflow.com/questions/2970525/converting-any-string-into-camel-case for convenience
   //modified to simultaneously remove 's and !s
-  camelize(str) {
+  camelize(str: string) {
     return str.replace(/(?:['!])/g, "").replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function (match, index) {
         if (+match === 0) return ""; // or if (/\s+/.test(match)) for white spaces
         return index === 0 ? match.toLowerCase() : match.toUpperCase();
@@ -38,7 +38,8 @@ export class EquipmentCategoryComponent implements OnInit {
     //TODO: Figure out how to implement this in the context of the Character - should there be an Equipment arr?
     console.log(event, item)
     //TODO: tie the below to a var instead with [active]="" in the html once equipment is figured out
-    event.currentTarget.classList.toggle("active");
+    let target = event.currentTarget as HTMLDivElement;
+    target.classList.toggle("active");
   }
 
   setSlotItemVisibility() {

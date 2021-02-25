@@ -1,1 +1,188 @@
-<p>talents works!</p>
+<app-character-information></app-character-information>
+<h2>Talents</h2>
+<div id="skillsContainer">
+    <div id="skillsBGContainer">
+        <img src="./assets/images/UI/Talents/UIskills.png" id="skillsBase" draggable='false'/>
+        <div id="skillTabsContainer">
+            <ul id="skillTabsRow">
+                <li
+                *ngFor="let tab of talentTabs"
+                [class.noDisplay]="!activeClass.talentTabNames.includes(tab.name)"
+                [class.inactiveTab]="activeTab !== tab.name"
+                class="uiTab"
+                id="{{camelize(tab.name)}}Tab"
+                (click)="tTabClicked(tab.name)">
+                    <img
+                    src="./assets/images/TalentTabs/Tabs/{{tab.name}}.png"
+                    draggable='false'/>
+                </li>
+            </ul>
+        </div>
+        <div id="talentsContainer">
+            <ul
+            *ngFor="let rowNum of [0, 1, 2]"
+            class="talentsRow">
+                <li
+                *ngFor="let colNum of [0, 1, 2, 3, 4]">
+                    <img
+                    *ngIf="this.jsonService.talentsLoaded"
+                    src="./assets/images/TalentTabs/Talents/{{activeTalents[(rowNum*5) + colNum].name}}.png"
+                    class="uiTalent"
+                    id="talent{{(rowNum*5) + colNum}}"
+                    (click)="talentClicked((rowNum*5) + colNum)"
+                    draggable='false'/>
+                    <div class="talentLvContainer noDisplay">
+                        <img
+                        src="./assets/images/UI/Talents/UISkillLv.png"
+                        class="uiTalentLv"
+                        draggable='false'/>
+                        <span id="talent{{(rowNum*5) + colNum}}Level">100</span>
+                    </div>
+                </li>
+            </ul>
+                <!-- <li>
+                    <img src="./assets/images/UI/Talents/UnknownSkill.png" class="uiTalent" id="talent0" onclick="talentClicked(0)" draggable='false'/>
+                    <div class="talentLvContainer noDisplay">
+                        <img src="./assets/images/UI/Talents/UISkillLv.png" class="uiTalentLv" draggable='false'/>
+                        <span id="talent0Level">100</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="./assets/images/UI/Talents/UnknownSkill.png" class="uiTalent" id="talent1" onclick="talentClicked(1)" draggable='false'/>
+                    <div class="talentLvContainer noDisplay">
+                        <img src="./assets/images/UI/Talents/UISkillLv.png" class="uiTalentLv" draggable='false'/>
+                        <span id="talent1Level">100</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="./assets/images/UI/Talents/UnknownSkill.png" class="uiTalent" id="talent2" onclick="talentClicked(2)" draggable='false'/>
+                    <div class="talentLvContainer noDisplay">
+                        <img src="./assets/images/UI/Talents/UISkillLv.png" class="uiTalentLv" draggable='false'/>
+                        <span id="talent2Level">100</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="./assets/images/UI/Talents/UnknownSkill.png" class="uiTalent" id="talent3" onclick="talentClicked(3)" draggable='false'/>
+                    <div class="talentLvContainer noDisplay">
+                        <img src="./assets/images/UI/Talents/UISkillLv.png" class="uiTalentLv" draggable='false'/>
+                        <span id="talent3Level">100</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="./assets/images/UI/Talents/UnknownSkill.png" class="uiTalent" id="talent4" onclick="talentClicked(4)" draggable='false'/>
+                    <div class="talentLvContainer noDisplay">
+                        <img src="./assets/images/UI/Talents/UISkillLv.png" class="uiTalentLv" draggable='false'/>
+                        <span id="talent4Level">100</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="talentsRow">
+                <li>
+                    <img src="./assets/images/UI/Talents/UnknownSkill.png" class="uiTalent" id="talent5" onclick="talentClicked(5)" draggable='false'/>
+                    <div class="talentLvContainer noDisplay">
+                        <img src="./assets/images/UI/Talents/UISkillLv.png" class="uiTalentLv" draggable='false'/>
+                        <span id="talent5Level">100</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="./assets/images/UI/Talents/UnknownSkill.png" class="uiTalent" id="talent6" onclick="talentClicked(6)" draggable='false'/>
+                    <div class="talentLvContainer noDisplay">
+                        <img src="./assets/images/UI/Talents/UISkillLv.png" class="uiTalentLv" draggable='false'/>
+                        <span id="talent6Level">100</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="./assets/images/UI/Talents/UnknownSkill.png" class="uiTalent" id="talent7" onclick="talentClicked(7)" draggable='false'/>
+                    <div class="talentLvContainer noDisplay">
+                        <img src="./assets/images/UI/Talents/UISkillLv.png" class="uiTalentLv" draggable='false'/>
+                        <span id="talent7Level">100</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="./assets/images/UI/Talents/UnknownSkill.png" class="uiTalent" id="talent8" onclick="talentClicked(8)" draggable='false'/>
+                    <div class="talentLvContainer noDisplay">
+                        <img src="./assets/images/UI/Talents/UISkillLv.png" class="uiTalentLv" draggable='false'/>
+                        <span id="talent8Level">100</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="./assets/images/UI/Talents/UnknownSkill.png" class="uiTalent" id="talent9" onclick="talentClicked(9)" draggable='false'/>
+                    <div class="talentLvContainer noDisplay">
+                        <img src="./assets/images/UI/Talents/UISkillLv.png" class="uiTalentLv" draggable='false'/>
+                        <span id="talent9Level">100</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="talentsRow">
+                <li>
+                    <img src="./assets/images/UI/Talents/UnknownSkill.png" class="uiTalent" id="talent10" onclick="talentClicked(10)" draggable='false'/>
+                    <div class="talentLvContainer noDisplay">
+                        <img src="./assets/images/UI/Talents/UISkillLv.png" class="uiTalentLv" draggable='false'/>
+                        <span id="talent10Level">100</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="./assets/images/UI/Talents/UnknownSkill.png" class="uiTalent" id="talent11" onclick="talentClicked(11)" draggable='false'/>
+                    <div class="talentLvContainer noDisplay">
+                        <img src="./assets/images/UI/Talents/UISkillLv.png" class="uiTalentLv" draggable='false'/>
+                        <span id="talent11Level">100</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="./assets/images/UI/Talents/UnknownSkill.png" class="uiTalent" id="talent12" onclick="talentClicked(12)" draggable='false'/>
+                    <div class="talentLvContainer noDisplay">
+                        <img src="./assets/images/UI/Talents/UISkillLv.png" class="uiTalentLv" draggable='false'/>
+                        <span id="talent12Level">100</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="./assets/images/UI/Talents/UnknownSkill.png" class="uiTalent" id="talent13" onclick="talentClicked(13)" draggable='false'/>
+                    <div class="talentLvContainer noDisplay">
+                        <img src="./assets/images/UI/Talents/UISkillLv.png" class="uiTalentLv" draggable='false'/>
+                        <span id="talent13Level">100</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="./assets/images/UI/Talents/UnknownSkill.png" class="uiTalent" id="talent14" onclick="talentClicked(14)" draggable='false'/>
+                    <div class="talentLvContainer noDisplay">
+                        <img src="./assets/images/UI/Talents/UISkillLv.png" class="uiTalentLv" draggable='false'/>
+                        <span id="talent14Level">100</span>
+                    </div>
+                </li>
+            </ul> -->
+        </div>
+        <div id="tabInfoContainer">
+            <div id="classNameContainer" class="noDisplay textShadow">
+                <img src="./assets/images/TalentTabs/TabIcons/Beginner.png" id="classImageLeft" draggable='false'/>
+                <span id="className">Beginner</span>
+                <img src="./assets/images/TalentTabs/TabIcons/Beginner.png" id="classImageRight" draggable='false'/>
+            </div>
+            <div id="availPtsContainer" class="noDisplay">
+                <span id="availablePoints">Available Points: </span>
+            </div>
+            <div id="familyBonusContainer" class="noDisplay textShadow">
+                <span id="familyBonus">FAMILY BONUS: </span>
+            </div>
+        </div>
+        <div id="talentInfoContainer" class="noDisplay">
+            <div id="talentImageContainer">
+                <img src="./assets/images/TalentTabs/Talents/Health Booster.png" id="talentImage" draggable='false'/>
+                <span id="talentLevelText" class="textShadow">LV 100/100</span>
+            </div>
+            <div id="talentTextContainer">
+                <div>
+                    <span id="talentName" class="textShadow">HEALTH BOOSTER</span>
+                    <span id="talentDescription">Increases Max HP by 0</span>
+                </div>
+                <div>
+                    <span id="talentNextLv" class="textShadow">NEXT LV</span>
+                    <span id="talentUpgradeDescription">+1.2 HP</span>
+                </div>
+            </div>
+            <div id="talentUpgradeContainer">
+                <img src="./assets/images/UI/Talents/UpgradeSkill.png" id="talentUpgradeBtn" onclick="checkUpgradeTalent()" draggable='false'/>
+                <span id="talentPointsLeft" class="textShadow">POINTS LEFT: 1000</span>
+            </div>
+        </div>
+    </div>
+</div>

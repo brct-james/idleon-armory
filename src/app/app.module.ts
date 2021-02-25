@@ -11,6 +11,7 @@ import { CharacterInformationComponent } from './character-information/character
 import { EquipmentComponent } from './equipment/equipment.component';
 import { TalentsComponent } from './talents/talents.component';
 import { EquipmentCategoryComponent } from './equipment-category/equipment-category.component';
+import { GuidesComponent } from './guides/guides.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EquipmentCategoryComponent } from './equipment-category/equipment-categ
     CharacterInformationComponent,
     EquipmentComponent,
     TalentsComponent,
-    EquipmentCategoryComponent
+    EquipmentCategoryComponent,
+    GuidesComponent
   ],
   imports: [
     BrowserModule,

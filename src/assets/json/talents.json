@@ -1,0 +1,926 @@
+[
+{
+"name":"Health Booster",
+"parentTabs":["Beginner","Rage Basics","Calm Basics","Savvy Basics"],
+"textArr":["Increases Max HP by "],
+"progFormulae":["add(level,1,.15)"],
+"upgradeTextArr":["+"," HP"]
+},
+{
+"name":"Mana Booster",
+"parentTabs":["Beginner","Beginner","Rage Basics","Calm Basics","Savvy Basics"],
+"textArr":["Increases Max MP by "],
+"progFormulae":["add(level,1,.1)"],
+"upgradeTextArr":["+"," MP"]
+},
+{
+"name":"Star Player",
+"parentTabs":["Beginner","Rage Basics","Calm Basics","Savvy Basics"],
+"textArr":["Gives "," Special Talent Points. Special Talents are found throughout the game!"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+1 Special Talent Point"]
+},
+{
+"name":"Bucklered Up",
+"parentTabs":["Beginner","Rage Basics","Calm Basics","Savvy Basics"],
+"textArr":["Increases Total Defense by +","%"],
+"progFormulae":["decay(level,40,60)"],
+"upgradeTextArr":["+","% Total DEF"]
+},
+{
+"name":"Sharpened Axe",
+"parentTabs":["Beginner","Rage Basics","Calm Basics","Savvy Basics"],
+"textArr":["Increases Base Weapon Power by ",". This contributes to your total damage."],
+"progFormulae":["add(level,0.25,0)"],
+"upgradeTextArr":["+"," Base Weapon Power"]
+},
+{
+"name":"Fist Of Rage",
+"parentTabs":["Beginner","Rage Basics","Calm Basics","Savvy Basics"],
+"textArr":["Increases your Base STR by "," (STR boosts Max HP and Crit Damage)"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+"," STR"]
+},
+{
+"name":"Quickness Boots",
+"parentTabs":["Beginner","Rage Basics","Calm Basics","Savvy Basics"],
+"textArr":["Increases your Base AGI by "," (AGI boosts Movement Speed and Crit Chance)"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+"," AGI"]
+},
+{
+"name":"Book Of The Wise",
+"parentTabs":["Beginner","Rage Basics","Calm Basics","Savvy Basics"],
+"textArr":["Increases your Base WIS by "," (WIS boosts Mana and Boss Damage)"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+"," WIS"]
+},
+{
+"name":"Lucky Clover",
+"parentTabs":["Beginner","Rage Basics","Calm Basics","Savvy Basics"],
+"textArr":["Increases your Base LUK by "," (LUK boosts drop rate, EXP Gain, and other RNG.)"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+"," LUK"]
+},
+{
+"name":"Gilded Sword",
+"parentTabs":["Beginner","Rage Basics","Calm Basics","Savvy Basics"],
+"textArr":["Boosts Damage dealt|to all monsters by ","%"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+","% Damage"]
+},
+{
+"name":"From Downtown",
+"parentTabs":["Journeyman"],
+"textArr":["Throws a Basketball that| deals ","% damage and |taunts the monster on hit"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+","% Dmg"]
+},
+{
+"name":"Double Jab",
+"parentTabs":["Journeyman"],
+"textArr":["Regular punches do +","%|damage and also hit a|2nd time for less damage"],
+"progFormulae":["add(level,2,1)","add(level,4.5,.5)"],
+"upgradeTextArr":["+","% damage"]
+},
+{
+"name":"Brute Efficiency",
+"parentTabs":["Rage Basics"],
+"textArr":["Increases the total efficiency of all specialized skills by ","%"],
+"progFormulae":["add(level,1,.02)"],
+"upgradeTextArr":["+","% Efficiency"]
+},
+{
+"name":"Meat Shank",
+"parentTabs":["Rage Basics"],
+"textArr":["Damage dealt is increased by ","% for every power of 10 Max HP you have"],
+"progFormulae":["decay(level,100,80)"],
+"upgradeTextArr":["+","% Damage"]
+},
+{
+"name":"Critikill",
+"parentTabs":["Rage Basics"],
+"textArr":["Increases Critical Hit Damage by ","%"],
+"progFormulae":["decay(level,52,50)"],
+"upgradeTextArr":["+","% Critical Damage"]
+},
+{
+"name":"Idle Brawling",
+"parentTabs":["Rage Basics"],
+"textArr":["AFK Gains Rate for Fighting is increased by ","%"],
+"progFormulae":["decay(level,20,50)"],
+"upgradeTextArr":["+","% AFK Gains Rate"]
+},
+{
+"name":"Idle Skilling",
+"parentTabs":["Rage Basics"],
+"textArr":["AFK Gains Rate for all Specialized Skills is increased by ","%"],
+"progFormulae":["decay(level,20,40)"],
+"upgradeTextArr":["+","% AFK Gains Rate"]
+},
+{
+"name":"Power Strike",
+"parentTabs":["Warrior"],
+"textArr":["Slash forward dealing ","%|damage to up to|2 monsters"],
+"progFormulae":["bigBase(level,130,3)"],
+"upgradeTextArr":["+","% Damage"]
+},
+{
+"name":"Whirl",
+"parentTabs":["Warrior"],
+"textArr":["Swing your weapon around you|dealing ","% damage to up to|"," monsters"],
+"progFormulae":["bigBase(level,60,1.5)","intervalAdd(level,3,24)"],
+"upgradeTextArr":["+","% Damage , +"," Mobs Hit"]
+},
+{
+"name":"Health Overdrive",
+"parentTabs":["Warrior"],
+"textArr":["Increase max HP by ","%"],
+"progFormulae":["add(level,.5,.02)"],
+"upgradeTextArr":["+","% HP"]
+},
+{
+"name":"Double Strike",
+"parentTabs":["Warrior"],
+"textArr":["Basic Attacks with Warrior Weapons have a ","% chance to hit twice"],
+"progFormulae":["decay(level,110,50)"],
+"upgradeTextArr":["% Double Hit Chance"]
+},
+{
+"name":"Firmly Grasp It",
+"parentTabs":["Warrior"],
+"textArr":["Temporarily boosts base STR by "," for "," minutes"],
+"progFormulae":["bigBase(level,15,1)","intervalAdd(level,2,4)"],
+"upgradeTextArr":["+"," STR , +"," Mins"]
+},
+{
+"name":"Strength In Numbers",
+"parentTabs":["Warrior"],
+"textArr":["STR's effect on both Damage and HP is increased by ","%"],
+"progFormulae":["add(level,0.75,0)"],
+"upgradeTextArr":["+","% Effect"]
+},
+{
+"name":"'Str'Ess Tested Garb",
+"parentTabs":["Warrior"],
+"textArr":["All Equipment gives ","% more STR than what's listed"],
+"progFormulae":["decay(level,200,250)"],
+"upgradeTextArr":["+","% more STR from equips"]
+},
+{
+"name":"Carry A Big Stick",
+"parentTabs":["Warrior"],
+"textArr":["The effect Weapon Power has on Damage Dealt is increased by ","%"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+","% Weapon Power Effect"]
+},
+{
+"name":"Absolute Unit",
+"parentTabs":["Warrior"],
+"textArr":["+"," base STR"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+"," STR"]
+},
+{
+"name":"Haungry For Gold",
+"parentTabs":["Warrior"],
+"textArr":["Golden Food bonuses are increased by ","%"],
+"progFormulae":["decay(level,55,80)"],
+"upgradeTextArr":["+","% Bonus"]
+},
+{
+"name":"Big Pick",
+"parentTabs":["Warrior"],
+"textArr":["Swings forward and mines the rock with +","% bonus Mining Efficiency"],
+"progFormulae":["bigBase(level,150,15)"],
+"upgradeTextArr":["+","% Efficiency"]
+},
+{
+"name":"Copper Collector",
+"parentTabs":["Warrior"],
+"textArr":["Mining Efficiency is increased by +","% for every power of 10 Copper Ore in Storage Chest."],
+"progFormulae":["decay(level,20,70)"],
+"upgradeTextArr":["+","% efficiency"]
+},
+{
+"name":"Motherlode Miner",
+"parentTabs":["Warrior"],
+"textArr":["+","% base multi-ore drop chance. This can trigger up to 4 times in a row per swing."],
+"progFormulae":["decay(level,20,50)"],
+"upgradeTextArr":["+","% Multi-Ore Base Chance"]
+},
+{
+"name":"Tool Proficiency",
+"parentTabs":["Warrior"],
+"textArr":["Pickaxes give +","% more Mining Power than whats listed for every 10 Mining Lv you have"],
+"progFormulae":["decay(level,16,40)"],
+"upgradeTextArr":["+","% POW per 10 Mining Lv"]
+},
+{
+"name":"Tempestuous Emotions",
+"parentTabs":["Warrior"],
+"textArr":["Increases Exp Gain for all Specialized Skills by ","%"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+","% Exp Gain"]
+},
+{
+"name":"Bear Swipe",
+"parentTabs":["Barbarian"],
+"textArr":["A big ol' bear claw swipes up to "," monsters in front of you, dealing ","% damage"],
+"progFormulae":["intervalAdd(level,3,30)","bigBase(level,108,2)"],
+"upgradeTextArr":["+"," mobs , +","% dmg"]
+},
+{
+"name":"Axe Hurl",
+"parentTabs":["Barbarian"],
+"textArr":["Throws axe in a downward arc, which deals ","% dmg to up to "," monsters."],
+"progFormulae":["bigBase(level,200,3)","intervalAdd(level,2,50)"],
+"upgradeTextArr":["+","% dmg , +"," mobs"]
+},
+{
+"name":"Mocking Shout",
+"parentTabs":["Barbarian"],
+"textArr":["Every 0.5 sec, monsters move toward you and heal for ","% HP. You get +","% EXP gain."],
+"progFormulae":["add(level,1,0)","add(level,1,0)"],
+"upgradeTextArr":["+1% Monster heal, +1% EXP"]
+},
+{
+"name":"No Pain No Gain",
+"parentTabs":["Barbarian"],
+"textArr":["Reduces max HP by ","%, increases damage by ","%. Also, you take double damage."],
+"progFormulae":["decay(level,100,30)","decay(level,100,50)"],
+"upgradeTextArr":["-","% HP , +","% damage"]
+},
+{
+"name":"Monster Decimator",
+"parentTabs":["Barbarian"],
+"textArr":["There is a ","% chance for a monster kill to be counted for double for opening new portals."],
+"progFormulae":["decay(level,100,50)"],
+"upgradeTextArr":["+","% double count chance"]
+},
+{
+"name":"Apocalypse Zow",
+"parentTabs":["Barbarian"],
+"textArr":["+","% Dmg for every monster you kill over 100"],
+"progFormulae":["25(level,000_times._Counts_}_monster_types,2)","0(level,intervalAdd,1)"],
+"upgradeTextArr":["add"]
+},
+{
+"name":"Fistful Of Obol",
+"parentTabs":["Barbarian"],
+"textArr":["Obols give +","% more STR than what's listed"],
+"progFormulae":["decay(level,60,50)"],
+"upgradeTextArr":["+","% more STR from Obols"]
+},
+{
+"name":"Strongest Statues",
+"parentTabs":["Barbarian"],
+"textArr":["'Strength', 'Mining', and 'Oceanman' statues give ","% higher bonuses"],
+"progFormulae":["decay(level,100,50)"],
+"upgradeTextArr":["+","% higher bonuses"]
+},
+{
+"name":"Str Summore",
+"parentTabs":["Barbarian"],
+"textArr":["+"," Max Talent Level for 'Fist of Rage'"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+"," Max Lv"]
+},
+{
+"name":"Beefy Bottles",
+"parentTabs":["Barbarian"],
+"textArr":["This talent is not yet functional. Shmowzow!"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+"," Nothing"]
+},
+{
+"name":"Worming Undercover",
+"parentTabs":["Barbarian"],
+"textArr":["% chance"],
+"progFormulae":["9.3(level,to,wake_the_sleeper_agent_worm_within_the_fish,_letting_you_instantly_catch)"],
+"upgradeTextArr":["NONE"]
+},
+{
+"name":"Bobbin' Bobbers",
+"parentTabs":["Barbarian"],
+"textArr":["+","% Minigame reward, and +1 Fishing Power per pt of your Highscore, up to +"],
+"progFormulae":["bigBase(level,12,3)","intervalAdd(level,5,3)"],
+"upgradeTextArr":["+","% reward , +"," Cap"]
+},
+{
+"name":"All Fish Diet",
+"parentTabs":["Barbarian"],
+"textArr":["+","% Fishing EXP, since like, fish is brain food and so it makes sense that... eh forget it."],
+"progFormulae":["add(level,1.5,0)"],
+"upgradeTextArr":["+1.5% Fishing EXP"]
+},
+{
+"name":"Catching Some Zzz'S",
+"parentTabs":["Barbarian"],
+"textArr":["+","% Away Gains for Fishing only. Just fishing. It totally doesn't boost anything else!"],
+"progFormulae":["decay(level,20,60)"],
+"upgradeTextArr":["+","% Fishing Away Gains"]
+},
+{
+"name":"Back To Basics",
+"parentTabs":["Barbarian","Squire"],
+"textArr":["+"," Talent Points for the 'Warrior' talent tab, and +10 dmg to these Talents' feelings!"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+1 Talent Pt"]
+},
+{
+"name":"Elusive Efficiency",
+"parentTabs":["Calm Basics"],
+"textArr":["Increases the total efficiency of all specialized skills by ","%"],
+"progFormulae":["add(level,1,.02)"],
+"upgradeTextArr":["+","% Efficiency"]
+},
+{
+"name":"Featherweight",
+"parentTabs":["Calm Basics"],
+"textArr":["Increases Movement Speed by ","% so you can outrun those slowpoke Warriors and Mages"],
+"progFormulae":["decay(level,25,40)"],
+"upgradeTextArr":["+","% Move Speed"]
+},
+{
+"name":"I See You",
+"parentTabs":["Calm Basics"],
+"textArr":["Increases Critical Hit Chance by ","%"],
+"progFormulae":["decay(level,27,50)"],
+"upgradeTextArr":["+","% Crit Chance"]
+},
+{
+"name":"Idle Shooting",
+"parentTabs":["Calm Basics"],
+"textArr":["AFK Gains Rate for Fighting is increased by ","%"],
+"progFormulae":["decay(level,20,50)"],
+"upgradeTextArr":["+","% AFK Gains Rate"]
+},
+{
+"name":"Broken Time",
+"parentTabs":["Calm Basics"],
+"textArr":["Production Speed in all Town Skills is increased by ","%"],
+"progFormulae":["decay(level,100,75)"],
+"upgradeTextArr":["+","% Production Speed"]
+},
+{
+"name":"Piercing Arrow",
+"parentTabs":["Archer"],
+"textArr":["Shoots an arrow that deals ","% damage to up to "," monsters"],
+"progFormulae":["bigBase(level,110,2)","intervalAdd(level,2,40)"],
+"upgradeTextArr":["+","% Damage , +"," Mobs Hit"]
+},
+{
+"name":"Kung Fu Kick",
+"parentTabs":["Archer"],
+"textArr":["Pushes back nearby monsters by "," pixels while dealing ","% damage"],
+"progFormulae":["bigBase(level,25,1)","bigBase(level,60,2)"],
+"upgradeTextArr":["+"," pixels , +","% DMG"]
+},
+{
+"name":"Hema Overdrive",
+"parentTabs":["Archer"],
+"textArr":["Increase max HP and max MP by ","%"],
+"progFormulae":["add(level,.4,.01)"],
+"upgradeTextArr":["+","% HP and MP"]
+},
+{
+"name":"Strafe",
+"parentTabs":["Archer"],
+"textArr":["Temporarily boosts Movement Speed by ","% for "," minutes"],
+"progFormulae":["bigBase(level,5,.5)","intervalAdd(level,2,15)"],
+"upgradeTextArr":["+","% Speed % +"," Mins"]
+},
+{
+"name":"Have Another!",
+"parentTabs":["Archer"],
+"textArr":["Basic Attacks have a ","% chance to fire 1 additional arrow"],
+"progFormulae":["decay(level,120,40)"],
+"upgradeTextArr":["+","% Chance"]
+},
+{
+"name":"Veins Of The Infernal",
+"parentTabs":["Archer"],
+"textArr":["Increases Damage Dealt by ","% every 10 Smithing Levels"],
+"progFormulae":["decay(level,24,60)"],
+"upgradeTextArr":["+","% Damage"]
+},
+{
+"name":"Garb Of Un'Agi'Ng Quality",
+"parentTabs":["Archer"],
+"textArr":["All Equipment gives ","% more AGI than what's listed"],
+"progFormulae":["add(level,1.5,0)"],
+"upgradeTextArr":["+","% more AGI from equips"]
+},
+{
+"name":"High Polymer Limbs",
+"parentTabs":["Archer"],
+"textArr":["The effect Weapon Power has on Damage Dealt is increased by ","%"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+","% Weapon Power Effect"]
+},
+{
+"name":"Sanic Speed",
+"parentTabs":["Archer"],
+"textArr":["+"," base AGI"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+"," AGI"]
+},
+{
+"name":"Robbinghood",
+"parentTabs":["Archer"],
+"textArr":["Monster drop rarity increased by ","%"],
+"progFormulae":["decay(level,40,65)"],
+"upgradeTextArr":["+","% rarity"]
+},
+{
+"name":"Smeltin' Erryday",
+"parentTabs":["Archer"],
+"textArr":["Every kill has a ","% chance to give "," seconds of instant forge progress"],
+"progFormulae":["decay(level,50,80)","intervalAdd(level,1,60)"],
+"upgradeTextArr":["+","% for "," forge secs"]
+},
+{
+"name":"Acme Anvil",
+"parentTabs":["Archer"],
+"textArr":["Get 1 Anvil Production Point, and also gain +"," extra pts every 10 Smithing Lvs"],
+"progFormulae":["intervalAdd(level,1,15)"],
+"upgradeTextArr":["+"," extra pts"]
+},
+{
+"name":"Yea I Already Know",
+"parentTabs":["Archer"],
+"textArr":["Start with ","% exp per 250 AGI when you lv up any Specialized Skill. Caps at ","%."],
+"progFormulae":["decay(level,5,90)","intervalAdd(level,5,10)"],
+"upgradeTextArr":["+","% Exp, and +","% Cap"]
+},
+{
+"name":"Godly Creation",
+"parentTabs":["Archer"],
+"textArr":["% chance to apply a special bonus to any equip crafted at the anvil. "],
+"progFormulae":["decay(level,50,75)"],
+"upgradeTextArr":["+","% Chance"]
+},
+{
+"name":"Focused Soul",
+"parentTabs":["Archer"],
+"textArr":["EXP Gain for all Specialized Skills is increased by ","%"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+","% EXP gain in Spec Skills"]
+},
+{
+"name":"Homing Arrows",
+"parentTabs":["Bowman"],
+"textArr":["Fires "," arrows into the air, which seek out nearby monsters and deal ","% damage"],
+"progFormulae":["intervalAdd(level,2,15)","bigBase(level,27,3)"],
+"upgradeTextArr":["+"," arrow , +","% damage"]
+},
+{
+"name":"Magic Shortbow",
+"parentTabs":["Bowman"],
+"textArr":["Magic shortbows fire at your target, and up to "," nearby monsters, for ","% damage"],
+"progFormulae":["intervalAdd(level,2,20)","bigBase(level,47,3)"],
+"upgradeTextArr":["+"," monsters , +","% dmg"]
+},
+{
+"name":"Flax Instastring",
+"parentTabs":["Bowman"],
+"textArr":["Basic attacks have a ","% chance to spawn a Magic Shortbow."],
+"progFormulae":["decay(level,40,50)"],
+"upgradeTextArr":["+","% trigger chance"]
+},
+{
+"name":"Extendo Rangeo",
+"parentTabs":["Bowman"],
+"textArr":["Attack range is increased by +"," Pixels, and +","% accuracy, for a few minutes"],
+"progFormulae":["bigBase(level,19.5,.5)","decay(level,40,60)"],
+"upgradeTextArr":["+","px Range , +"," mins"]
+},
+{
+"name":"Woah, That Was Fast!",
+"parentTabs":["Bowman"],
+"textArr":["All attack talent cooldowns are ","% lower. No, not regular attacks lol"],
+"progFormulae":["decay(level,30,40)"],
+"upgradeTextArr":["+%"," lower cooldowns"]
+},
+{
+"name":"Speedna",
+"parentTabs":["Bowman"],
+"textArr":["+","% Damage for every 25% movement spd you have above 100%"],
+"progFormulae":["decay(level,100,77)"],
+"upgradeTextArr":["+","% damage"]
+},
+{
+"name":"Shoeful Of Obol",
+"parentTabs":["Bowman"],
+"textArr":["Obols give +","% more AGI than what is listed"],
+"progFormulae":["decay(level,135,80)"],
+"upgradeTextArr":["+","% more AGI"]
+},
+{
+"name":"Shwifty Statues",
+"parentTabs":["Bowman"],
+"textArr":["'Speed', 'Anvil', and 'Ol Reliable' statues give +","% more bonus"],
+"progFormulae":["decay(level,100,50)"],
+"upgradeTextArr":["+","% higher bonuses"]
+},
+{
+"name":"Agi Again",
+"parentTabs":["Bowman"],
+"textArr":["+"," Max Talent Level for 'Quickness Boots'"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+"," Max Lv"]
+},
+{
+"name":"Velocity Vessels",
+"parentTabs":["Bowman"],
+"textArr":["This talent is not yet functional. Yowzam!"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+"," Nothing"]
+},
+{
+"name":"Teleki'Net'Ic Logs",
+"parentTabs":["Bowman"],
+"textArr":["+","% Catching Efficiency for every power of 10 Oak Logs in the storage chest"],
+"progFormulae":["decay(level,20,70)"],
+"upgradeTextArr":["+","% Efficiency"]
+},
+{
+"name":"Briar Patch Runner",
+"parentTabs":["Bowman"],
+"textArr":["AGI has a +","% larger effect on Catching Efficiency than normal"],
+"progFormulae":["add(level,0.5,0)"],
+"upgradeTextArr":["+","% effect"]
+},
+{
+"name":"Bug Enthusiast",
+"parentTabs":["Bowman"],
+"textArr":["+","% Catching EXP. You're one step closer to figuring out how butter can fly!"],
+"progFormulae":["add(level,1.5,0)"],
+"upgradeTextArr":["+","% Catching EXP"]
+},
+{
+"name":"Sunset On The Hives",
+"parentTabs":["Bowman"],
+"textArr":["+","% Away Gain for Catching Hint:Useful for when you idle on catching!"],
+"progFormulae":["decay(level,20,60)"],
+"upgradeTextArr":["+","% Away Gains"]
+},
+{
+"name":"Previous Points",
+"parentTabs":["Bowman","Hunter"],
+"textArr":["+"," Talent Points for the 'Archer' talent tab. But"],
+"progFormulae":["0(level,what's_wrong_with_these_talents?,1)"],
+"upgradeTextArr":["txt"]
+},
+{
+"name":"Ballista",
+"parentTabs":["Siege Breaker"],
+"textArr":["Ballista bitch"],
+"progFormulae":["bigBase(level,400,25)"],
+"upgradeTextArr":["NONE"]
+},
+{
+"name":"Smart Efficiency",
+"parentTabs":["Savvy Basics"],
+"textArr":["Increases the total efficiency of all specialized skills by ","%"],
+"progFormulae":["add(level,1,.02)"],
+"upgradeTextArr":["+","% Efficiency"]
+},
+{
+"name":"Overclocked Energy",
+"parentTabs":["Savvy Basics"],
+"textArr":["Damage dealt is increased by ","% for every power of 10 Max MP you have"],
+"progFormulae":["decay(level,150,80)"],
+"upgradeTextArr":["+","% Damage"]
+},
+{
+"name":"Farsight",
+"parentTabs":["Savvy Basics"],
+"textArr":["Increases Crit Chance by ","% and Crit Dmg by ","%"],
+"progFormulae":["decay(level,17,45)","decay(level,33,45)"],
+"upgradeTextArr":["+","% Chance, +","% DMG"]
+},
+{
+"name":"Idle Casting",
+"parentTabs":["Savvy Basics"],
+"textArr":["AFK Gains Rate for Fighting is increased by ","%"],
+"progFormulae":["decay(level,20,50)"],
+"upgradeTextArr":["+","% AFK Gains Rate"]
+},
+{
+"name":"Active Afk'Er",
+"parentTabs":["Savvy Basics"],
+"textArr":["AFK Gains Rate for all Specialized Skills is increased by ","%"],
+"progFormulae":["decay(level,20,40)"],
+"upgradeTextArr":["+","% AFK Gains Rate"]
+},
+{
+"name":"Energy Bolt",
+"parentTabs":["Mage"],
+"textArr":["Your next basic attack strikes the Targeted Enemy for ","% Damage"],
+"progFormulae":["bigBase(level,160,2)"],
+"upgradeTextArr":["+","% Damage"]
+},
+{
+"name":"Mini Fireball",
+"parentTabs":["Mage"],
+"textArr":["Shoots a fireball that explodes on impact, dealing ","% damage"],
+"progFormulae":["bigBase(level,120,1)"],
+"upgradeTextArr":["+","% Damage"]
+},
+{
+"name":"Mana Overdrive",
+"parentTabs":["Mage"],
+"textArr":["Increase max MP by ","%"],
+"progFormulae":["add(level,.5,.02)"],
+"upgradeTextArr":["+","% MP"]
+},
+{
+"name":"Teleport",
+"parentTabs":["Mage"],
+"textArr":["Move forward instantly by a distance of "," Pixels"],
+"progFormulae":["bigBase(level,10,1)"],
+"upgradeTextArr":["+1 Pixel Moved"]
+},
+{
+"name":"You'Re Next",
+"parentTabs":["Mage"],
+"textArr":["Basic attacks have a ","% chance to Mark enemies, who then take ","% more damage"],
+"progFormulae":["decay(level,110,70)","bigBase(level,25,.5)"],
+"upgradeTextArr":["+","% chance , +","% dmg"]
+},
+{
+"name":"Knowledge Is Power",
+"parentTabs":["Mage"],
+"textArr":["The effect your WIS stat has on Damage is increased by    ","%"],
+"progFormulae":["add(level,1.5,0)"],
+"upgradeTextArr":["+","% Effect"]
+},
+{
+"name":"Unt'Wis'Ted Robes",
+"parentTabs":["Mage"],
+"textArr":["All Equipment gives ","% more WIS than what's listed"],
+"progFormulae":["add(level,1.5,0)"],
+"upgradeTextArr":["+","% more WIS from equips"]
+},
+{
+"name":"Power Overwhelming",
+"parentTabs":["Mage"],
+"textArr":["The effect Weapon Power has on Damage Dealt is increased by ","%"],
+"progFormulae":["add(level,1.2,0)"],
+"upgradeTextArr":["+","% Weapon Power Effect"]
+},
+{
+"name":"Free Meal",
+"parentTabs":["Mage"],
+"textArr":["% Chance for food to not be consumed when it otherwise would be"],
+"progFormulae":["decay(level,53,40)"],
+"upgradeTextArr":["+","% Non-Consume Chance"]
+},
+{
+"name":"Individual Insight",
+"parentTabs":["Mage"],
+"textArr":["+"," base WIS"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+"," WIS"]
+},
+{
+"name":"Log On Logs",
+"parentTabs":["Mage"],
+"textArr":["For "," Minutes, trees drop ","% more Logs than normal"],
+"progFormulae":["intervalAdd(level,2,10)","bigBase(level,14,1.86)"],
+"upgradeTextArr":["+"," Mins , +","% more Logs"]
+},
+{
+"name":"Leaf Thief",
+"parentTabs":["Mage"],
+"textArr":["% Choppin Efficiency per power of 10 Leaves in your Storage Chest."],
+"progFormulae":["decay(level,25,70)"],
+"upgradeTextArr":["+","% efficiency"]
+},
+{
+"name":"Deforesting All Doubt",
+"parentTabs":["Mage"],
+"textArr":["The effect your WIS stat has on Choppin Efficiency is increased by ","%"],
+"progFormulae":["add(level,0.75,0)"],
+"upgradeTextArr":["+","% Effect"]
+},
+{
+"name":"Inner Peace",
+"parentTabs":["Mage"],
+"textArr":["Increases Exp Gain for all Specialized Skills by ","%"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+","% Exp Gain"]
+},
+{
+"name":"Choppin It Up Ez",
+"parentTabs":["Mage"],
+"textArr":["+","% Minigame Rewards, and +","% Dmg per 25 Pts of your Minigame Highscore"],
+"progFormulae":["add(level,1,0)","decay(level,5.7,50)"],
+"upgradeTextArr":["+","% Rewards , +","% Dmg"]
+},
+{
+"name":"Earlier Education",
+"parentTabs":["Wizard","Shaman"],
+"textArr":["+"," Talent Points for the 'Mage' talent tab. What, these talent's aint good 'nuff for ya?"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+1 Talent Pt"]
+},
+{
+"name":"Crazy Concoctions",
+"parentTabs":["Shaman"],
+"textArr":["Throws 1 of 4 potions, with a potency of ","%"],
+"progFormulae":["bigBase(level,17,3)"],
+"upgradeTextArr":["+","% Potency"]
+},
+{
+"name":"Auspicious Aura",
+"parentTabs":["Shaman"],
+"textArr":["Casts "," aura which heals you and damages monsters. The strength of the aura is ","%"],
+"progFormulae":["bigBase(level,10,3)","intervalAdd(level,1,35)"],
+"upgradeTextArr":["+","% Strength , +"," Auras"]
+},
+{
+"name":"Sizzling Skull",
+"parentTabs":["Shaman"],
+"textArr":["This talent is not yet functional. Blame the meeblings, not me!"],
+"progFormulae":["bigBase(level,8,2)"],
+"upgradeTextArr":["+","% nothing"]
+},
+{
+"name":"Tenteyecle",
+"parentTabs":["Shaman"],
+"textArr":["Accuracy needed to hit monsters is ","% lower"],
+"progFormulae":["decay(level,50,100)"],
+"upgradeTextArr":["+","% lower"]
+},
+{
+"name":"Instant Invincibility",
+"parentTabs":["Shaman"],
+"textArr":["When damaged, you will stay invincible for an additional +"," more seconds"],
+"progFormulae":["decay(level,5,100)"],
+"upgradeTextArr":["+"," More Seconds"]
+},
+{
+"name":"Virile Vials",
+"parentTabs":["Shaman"],
+"textArr":["+","% damage dealt for every alchemy vial upgraded to at least Green LV"],
+"progFormulae":["decay(level,40,120)"],
+"upgradeTextArr":["+","% Damage"]
+},
+{
+"name":"Occult Obols",
+"parentTabs":["Shaman"],
+"textArr":["Obols give +","% more WIS than what is listed"],
+"progFormulae":["decay(level,135,80)"],
+"upgradeTextArr":["+","% more WIS"]
+},
+{
+"name":"Stupendous Statues",
+"parentTabs":["Shaman"],
+"textArr":["'Exp', 'Lumberbob', and 'Cauldron' statues give +","% more bonus"],
+"progFormulae":["decay(level,100,50)"],
+"upgradeTextArr":["+","% higher bonuses"]
+},
+{
+"name":"Wis Wumbo",
+"parentTabs":["Shaman"],
+"textArr":["+"," Max Talent Level for 'Book of the Wise'"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+"," Max Lv"]
+},
+{
+"name":"Fantasia Flasks",
+"parentTabs":["Shaman"],
+"textArr":["This talent is not yet functional. Slammacow!"],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+"," Nothing"]
+},
+{
+"name":"Cranium Cooking",
+"parentTabs":["Shaman"],
+"textArr":["Killing a monster gives "," seconds of instant alchemy progress. Lasts for "," seconds"],
+"progFormulae":["decay(level,40,100)","intervalAdd(level,10,2)"],
+"upgradeTextArr":["+"," progress , +"," time"]
+},
+{
+"name":"Busy Brewin'",
+"parentTabs":["Shaman"],
+"textArr":["Boosts brew speed by +","% for this character."],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+","% brew effect"]
+},
+{
+"name":"Bubble Breakthrough",
+"parentTabs":["Shaman"],
+"textArr":["+","% Alchemy EXP. Also, +","% odds of New Bubble when brewing on this player"],
+"progFormulae":["add(level,1,0)","add(level,1,.02)"],
+"upgradeTextArr":["+","% EXP , +","% chance"]
+},
+{
+"name":"Sharing Some Smarts",
+"parentTabs":["Shaman"],
+"textArr":["All characters in the same cauldron as this one gain +","% more Alch EXP."],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+","% Alch Exp"]
+},
+{
+"name":"Bored To Death",
+"parentTabs":["Mining"],
+"textArr":["Reduces the Respawn Timer to "," sec. This will boost AFK Survival Percent!"],
+"progFormulae":["reduce(level,600,2)"],
+"upgradeTextArr":[" sec Respawn"]
+},
+{
+"name":"Beginner Best Class",
+"parentTabs":["Mining"],
+"textArr":["+1 Base Weapon Power every 10 Lvs of your best Beginner. Caps at +","."],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+"," Weapon Pow Cap"]
+},
+{
+"name":"Studious Quester",
+"parentTabs":["Mining"],
+"textArr":["Quests give +","% more exp than normal"],
+"progFormulae":["decay(level,120,40)"],
+"upgradeTextArr":["+","% Quest Exp"]
+},
+{
+"name":"Quest Chungus",
+"parentTabs":["Mining"],
+"textArr":["Each Completed Quest gives +1 LUK. Total bonus caps at +"," LUK"],
+"progFormulae":["add(level,4,0)"],
+"upgradeTextArr":["+"," LUK Cap"]
+},
+{
+"name":"Crystals 4 Dayys",
+"parentTabs":["Mining"],
+"textArr":["Crystal Monsters have a +","% chance to spawn"],
+"progFormulae":["decay(level,174,50)"],
+"upgradeTextArr":["+","% Spawn Rate"]
+},
+{
+"name":"Will Of The Eldest",
+"parentTabs":["Mining"],
+"textArr":["+1 All Stats for every 10 Levels of your highest leveled character. Caps at +","."],
+"progFormulae":["add(level,1,0)"],
+"upgradeTextArr":["+"," All Stat Cap"]
+},
+{
+"name":"Tick Tock",
+"parentTabs":["Mining"],
+"textArr":["+","% Away Gains Rate for both Fighting and Skills"],
+"progFormulae":["decay(level,8,50)"],
+"upgradeTextArr":["+","% Away Gain Rate"]
+},
+{
+"name":"Stonks!",
+"parentTabs":["Mining"],
+"textArr":["Gives "," Special Talent Points."],
+"progFormulae":["decay(level,130,50)"],
+"upgradeTextArr":["Even Stonkier!"]
+},
+{
+"name":"Roll Da Dice",
+"parentTabs":["Mining"],
+"textArr":["Rolls a "," sided dice. If it lands on a 1, you win a special Trophy!"],
+"progFormulae":["reduce(level,10000,25)"],
+"upgradeTextArr":["Dice only has "," sides"]
+},
+{
+"name":"Attacks On Simmer",
+"parentTabs":["Mining"],
+"textArr":["Attack moves boost your AFK gains +","% more than they normally do"],
+"progFormulae":["decay(level,40,100)"],
+"upgradeTextArr":["+","% attack AFK effect"]
+},
+{
+"name":"Toilet Paper Postage",
+"parentTabs":["Mining"],
+"textArr":["Stamps giving Skill Efficiency will give ","x higher bonuses."],
+"progFormulae":["decayMulti(level,.7,100)"],
+"upgradeTextArr":["+","x higher bonus"]
+},
+{
+"name":"Exp Converter",
+"parentTabs":["Mining"],
+"textArr":["% of EXP earned in chosen Skill is turned to Class EXP. Assign to Attack to choose."],
+"progFormulae":["decay(level,150,200)"],
+"upgradeTextArr":["+","% Exp Converted"]
+},
+{
+"name":"Goblet Of Hemoglobin",
+"parentTabs":["Mining"],
+"textArr":["Killing a monster heals you by ","%. This also counts for AFK, helping Survivability!"],
+"progFormulae":["decay(level,6,66)"],
+"upgradeTextArr":["+","% HP regen per kill"]
+},
+{
+"name":"Convert Better, Darnit!",
+"parentTabs":["Smithing"],
+"textArr":["EXP Converter Talent gives ","x more Class EXP every 5 LV of chosen skill"],
+"progFormulae":["decayMulti(level,1.5,100)"],
+"upgradeTextArr":["+","x more Class Exp"]
+}
+]

@@ -6,7 +6,7 @@
 	text-align: center
 	background-color: $hover-grey
 	height: 4.5em
-	width: 16.5em
+	width: 18.5em
 	padding: 0.75em 0.25em
 	border-radius: 4px 4px 0 0
 	display: flex
@@ -15,14 +15,13 @@
 .character-container
 	margin: 0 0 0.5em 0 
 	padding: 0 
-	width: 15em 
+	width: 19em
 .no-list-style
 	list-style-type: none
 .dropdown
 	position: relative
 	background-color: $hover-grey
 	top: -0.5em
-	padding: 1em
 	border-radius: 0 0 4px 4px
 .dropdown-hide
 	display: none
@@ -32,7 +31,7 @@
 	left: 0 
 	background-color: $main-white
 	color: $main-grey
-	margin: .5em 
+	margin: .5em
 	padding: .3em 0 
 	height: 1.6em 
 	border-radius: 4px 
@@ -44,30 +43,51 @@
 	&:hover 
 		color: $main-white
 		background-color: $main-grey
-		left: .1em 
 .badge 
-	display: inline-block 
-	font-size: 12px 
-	color: white 
-	padding: 0.8em 0.7em 0 0.7em 
+	position: relative
+	top: -0.3em
+	color: $main-white 
 	background-color: $main-yellow 
-	line-height: 1em 
-	height: 1.8em 
-	margin-right: .8em 
 	border-radius: 4px 0 0 4px 
+	height: 2.2em
+	width: 1.5em
+	margin: auto
+	display: flex
+	align-items: center
+	justify-content: center
+	span
+		font-size: 14px 
 .end-badge 
+	width: 3.75em
 	float: right
-	left: 0px
-	margin-right: 0
-	margin-left: .8em 
 	border-radius: 0 4px 4px 0 
-
+.imgAndName
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: space-between
+	flex-grow: 1
+	margin: 0.5em
+	span
+		text-overflow: clip
+		max-width: 9em
+		overflow: hidden
+	img
+		width: 30px
+		margin: 0 0 0 0.2em
 @media(max-width: 449px)
 	.character-selector
 		height: 4em
-		width: 41vw
+		width: 44vw
 		padding: 0.5em
 	.character-container
-		width: 44vw
+		width: 42vw
 	.dropdown
 		padding: 0.2em
+	.imgAndName
+		span
+			max-width: 7em
+		img
+			margin: 0 0 0 0.1em
+	.character
+		margin: 0.5em 0em

@@ -4,9 +4,16 @@
         <div
         class="character"
         (click)="toggleDropdown()">
-            <span class="badge">{{selectedChar.id}}</span>
-            <span>{{selectedChar.name}}</span>
-            <span class="badge end-badge">Lv {{selectedChar.level}}</span>
+            <div class="badge">
+                <span>{{selectedChar.id}}</span>
+            </div>
+            <div class="imgAndName">
+                <span>{{selectedChar.name}}</span>
+                <img src='{{ "assets/images/TalentTabs/TabIcons/" + selectedChar.class + ".png"}}' />
+            </div>
+            <div class="badge end-badge">
+                <span>Lv {{selectedChar.level}}</span>
+            </div>
         </div>
     </div>
     <ul
@@ -15,12 +22,19 @@
         <ng-container *ngFor="let char of characters"> 
             <li
             class="character"
-            *ngIf="char !== selectedChar"
+            *ngIf="char.id !== selectedChar.id"
             (click)="onSelect(char)"
             [class.selected]="char === selectedChar">
-                <span class="badge">{{char.id}}</span>
-                <span>{{char.name}}</span>
-                <span class="badge end-badge">Lv {{char.level}}</span>
+                <div class="badge">
+                    <span>{{char.id}}</span>
+                </div>
+                <div class="imgAndName">
+                    <span>{{char.name}}</span>
+                    <img src='{{ "assets/images/TalentTabs/TabIcons/" + char.class + ".png"}}' />
+                </div>
+                <div class="badge end-badge">
+                    <span>Lv {{char.level}}</span>
+                </div>
             </li>
         </ng-container>
     </ul>

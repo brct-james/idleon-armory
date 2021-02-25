@@ -1,0 +1,69 @@
+[
+    {
+        "name":"Beginner",
+        "parentName": null,
+        "childrenNames":["Warrior", "Archer", "Mage"],
+        "talentTabNames":["Beginner", "Specials 1"],
+        "isSpoiler":false
+    },{
+        "name":"Warrior",
+        "parentName":"Beginner",
+        "childrenNames":["Barbarian", "Squire"],
+        "talentTabNames":["Rage Basics", "Warrior", "Specials 1"],
+        "isSpoiler":false
+    },{
+        "name":"Archer",
+        "parentName":"Beginner",
+        "childrenNames":["Bowman", "Hunter"],
+        "talentTabNames":["Calm Basics", "Archer", "Specials 1"],
+        "isSpoiler":false
+    },{
+        "name":"Mage",
+        "parentName":"Beginner",
+        "childrenNames":["Shaman", "Wizard"],
+        "talentTabNames":["Savvy Basics", "Mage", "Specials 1"],
+        "isSpoiler":false
+    },{
+        "name":"Journeyman",
+        "parentName":"Beginner",
+        "childrenNames":[],
+        "talentTabNames":["Journeyman Basics", "Journeyman", "Specials 1"],
+        "isSpoiler":true
+    },{
+        "name":"Barbarian",
+        "parentName":"Warrior",
+        "childrenNames":[],
+        "talentTabNames":["Rage Basics", "Warrior", "Barbarian", "Specials 1"],
+        "isSpoiler":false
+    },{
+        "name":"Squire",
+        "parentName":"Warrior",
+        "childrenNames":[],
+        "talentTabNames":["Rage Basics", "Warrior", "Squire", "Specials 1"],
+        "isSpoiler":false
+    },{
+        "name":"Bowman",
+        "parentName":"Archer",
+        "childrenNames":[],
+        "talentTabNames":["Calm Basics", "Archer", "Bowman", "Specials 1"],
+        "isSpoiler":false
+    },{
+        "name":"Hunter",
+        "parentName":"Archer",
+        "childrenNames":[],
+        "talentTabNames":["Calm Basics", "Archer", "Hunter", "Specials 1"],
+        "isSpoiler":false
+    },{
+        "name":"Shaman",
+        "parentName":"Mage",
+        "childrenNames":[],
+        "talentTabNames":["Savvy Basics", "Mage", "Shaman", "Specials 1"],
+        "isSpoiler":false
+    },{
+        "name":"Wizard",
+        "parentName":"Mage",
+        "childrenNames":[],
+        "talentTabNames":["Savvy Basics", "Mage", "Wizard", "Specials 1"],
+        "isSpoiler":false
+    }
+]

@@ -13,9 +13,12 @@
         <div>
           <strong>{{char.name}}</strong>
         </div>
-        <div>
-          <span>{{char.class}} (Lv {{char.level}})</span>
+        <div class="classLevContainer">
+          <img src='{{ "assets/images/TalentTabs/TabIcons/" + char.class + ".png"}}' />
+          <span>{{char.class}}</span>
+          <img src='{{ "assets/images/TalentTabs/TabIcons/" + char.class + ".png"}}' />
         </div>
+        <span>Lv {{char.level}}</span>
       </div>
       <div class="charListOptions noselect">
         <div
