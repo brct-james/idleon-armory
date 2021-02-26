@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScrollToService } from '../../scroll-to.service';
 
 @Component({
   selector: 'app-new-player',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewPlayerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private scroll: ScrollToService) { }
 
   ngOnInit(): void {
+    this.scroll.checkInitialScroll("#guide");
   }
 
 }

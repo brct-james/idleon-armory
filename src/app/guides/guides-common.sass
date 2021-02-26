@@ -1,0 +1,41 @@
+@import '../variables.sass'
+#guidesContainer
+    display: flex
+    flex-direction: row
+    height: 80vh
+#guide
+    display: flex
+    flex-direction: column
+    width: calc(100% - 10px)
+    scroll-behavior: smooth
+    overflow-y: scroll
+    hr
+        border-top: 1px solid $main-grey
+        width: 100%
+#guideHeader
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    h1
+        margin: 0.5em auto 0 0
+        color: $dark-blue
+        font-family: ExpletusSans, Arial
+        font-weight: 700
+        font-size: 2em
+#guideTOC
+    display: flex
+    flex-direction: column
+    align-self: flex-start
+    justify-content: flex-start
+    margin: 1em 0 0 0
+    h3
+        margin: 0
+    ul
+        margin: 0
+    li
+        margin: 0.25em 0 0 0
+#guideContent
+    display: flex
+    flex-direction: column
+    width: 100%
+    text-align: center
