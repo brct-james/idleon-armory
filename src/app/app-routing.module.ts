@@ -10,6 +10,10 @@ import { EventsComponent } from './guides/events/events.component';
 import { GemsComponent } from './guides/gems/gems.component';
 import { NewPlayerComponent } from './guides/new-player/new-player.component';
 import { TutorialComponent } from './guides/tutorial/tutorial.component';
+import { AmarokComponent } from './guides/amarok/amarok.component';
+import { EfauntComponent } from './guides/efaunt/efaunt.component';
+import { BlunderhillsComponent } from './guides/blunderhills/blunderhills.component';
+import { YumYumDesertComponent } from './guides/yum-yum-desert/yum-yum-desert.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -23,6 +27,10 @@ const routes: Routes = [
     { path: "gems", component: GemsComponent },
     { path: "new-player", component: NewPlayerComponent },
     { path: "tutorial", component: TutorialComponent },
+    { path: "amarok", component: AmarokComponent },
+    { path: "efaunt", component: EfauntComponent },
+    { path: "blunderhills", component: BlunderhillsComponent },
+    { path: "yum-yum-desert", component: YumYumDesertComponent },
     { path: "**", component: GuideSelectorComponent }
   ] }
 ];

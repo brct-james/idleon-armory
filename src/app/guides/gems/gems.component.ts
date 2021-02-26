@@ -8,7 +8,7 @@ import { ScrollToService } from '../../scroll-to.service';
 })
 export class GemsComponent implements OnInit {
 
-  constructor(private scroll: ScrollToService) { }
+  constructor(public scroll: ScrollToService) { }
 
   ngOnInit(): void {
     this.scroll.checkInitialScroll("#guide");

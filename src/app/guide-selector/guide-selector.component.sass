@@ -1,28 +1,26 @@
 @import '../variables.sass'
 #sidebar
     height: 100%
-    margin-right: 1em
-#guideList
-    width: calc(300px + 1em + 10px)
-    height: 100%
+    overflow-y: scroll
     background-color: $hover-grey
+#guideList
+    width: $sidebar-width
     display: flex
     flex-direction: column
     align-items: center
-    overflow-y: scroll
-    padding-top: 0.5em
+    margin-top: 0.5em
 .guidePreview
     display: flex
     flex-direction: row
-    width: 300px
+    width: $guide-preview-width
     align-items: center
     justify-content: center
     background-color: $main-white
     margin-bottom: 0.5em
     cursor: pointer
     img
-        width: 100px
-        height: 100px
+        width: $guide-preview-image-dimensions
+        height: $guide-preview-image-dimensions
         margin: 0.5em 0em 0.5em 0.5em
     &.active
         background-color: $light-yellow

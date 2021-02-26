@@ -17,6 +17,10 @@ import { EventsComponent } from './guides/events/events.component';
 import { NewPlayerComponent } from './guides/new-player/new-player.component';
 import { GemsComponent } from './guides/gems/gems.component';
 import { DailiesComponent } from './guides/dailies/dailies.component';
+import { AmarokComponent } from './guides/amarok/amarok.component';
+import { EfauntComponent } from './guides/efaunt/efaunt.component';
+import { BlunderhillsComponent } from './guides/blunderhills/blunderhills.component';
+import { YumYumDesertComponent } from './guides/yum-yum-desert/yum-yum-desert.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { DailiesComponent } from './guides/dailies/dailies.component';
     EventsComponent,
     NewPlayerComponent,
     GemsComponent,
-    DailiesComponent
+    DailiesComponent,
+    AmarokComponent,
+    EfauntComponent,
+    BlunderhillsComponent,
+    YumYumDesertComponent
   ],
   imports: [
     BrowserModule,

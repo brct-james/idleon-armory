@@ -14,7 +14,6 @@ export class ScrollToService {
     }
   }
   scrollTo(element: string, container: string) {
-    console.log("SCROLLING", element, container)
     let x = document.querySelector(element) as HTMLElement;
     let y = document.querySelector(container) as HTMLElement;
     if (x && y) {
@@ -23,12 +22,16 @@ export class ScrollToService {
   }
 
   scrollIfNeeded(element: HTMLElement, container: HTMLElement) {
-    if (element.offsetTop < container.scrollTop) {
-      container.scrollTop = element.offsetTop;
+    console.log(element.offsetTop, container.scrollTop)
+    if (element.offsetTop != container.scrollTop) {
+      container.scrollTop = element.offsetTop - 100;
+      console.log("scroll1")
     } else {
+      console.log("scroll2")
       const offsetBottom = element.offsetTop + element.offsetHeight;
       const scrollBottom = container.scrollTop + container.offsetHeight;
       if (offsetBottom > scrollBottom) {
+        console.log("scroll3")
         container.scrollTop = offsetBottom - container.offsetHeight;
       }
     }

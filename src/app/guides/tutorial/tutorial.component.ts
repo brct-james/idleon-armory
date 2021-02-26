@@ -7,9 +7,8 @@ import { ScrollToService } from '../../scroll-to.service';
   styleUrls: ['./tutorial.component.sass']
 })
 export class TutorialComponent implements OnInit {
-  guideName = 'Idleon Armory Tutorial';
 
-  constructor(private scroll: ScrollToService) { }
+  constructor(public scroll: ScrollToService) { }
 
   ngOnInit(): void {
     this.scroll.checkInitialScroll("#guide");

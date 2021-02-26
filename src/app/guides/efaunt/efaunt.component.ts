@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ScrollToService } from '../../scroll-to.service';
 
 @Component({
-  selector: 'app-events',
-  templateUrl: './events.component.html',
-  styleUrls: ['./events.component.sass']
+  selector: 'app-efaunt',
+  templateUrl: './efaunt.component.html',
+  styleUrls: ['./efaunt.component.sass']
 })
-export class EventsComponent implements OnInit {
+export class EfauntComponent implements OnInit {
 
   constructor(public scroll: ScrollToService) { }
 

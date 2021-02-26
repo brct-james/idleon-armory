@@ -33,5 +33,33 @@ export const guides = [
         previewImage: 'dailies.png',
         url: 'dailies',
         description: 'How to transition from "game" to "full-time job".'
+    },
+    {
+        id: 5,
+        name: 'Amarok',
+        previewImage: 'amarok.png',
+        url: 'amarok',
+        description: 'How to beat Amarok for the first time (and farm it thereafter).'
+    },
+    {
+        id: 6,
+        name: 'Efaunt',
+        previewImage: 'efaunt.png',
+        url: 'efaunt',
+        description: 'How to beat Efaunt for the first time (and farm it thereafter).'
+    },
+    {
+        id: 7,
+        name: 'Blunderhills Guide',
+        previewImage: 'blunderhills.png',
+        url: 'blunderhills',
+        description: 'All about Blunderhills and the features it contains.'
+    },
+    {
+        id: 8,
+        name: 'Yum-Yum Desert Guide',
+        previewImage: 'yum-yum-desert.png',
+        url: 'yum-yum-desert',
+        description: 'All about the Yum-Yum-Desert and the features it contains.'
     }
 ]

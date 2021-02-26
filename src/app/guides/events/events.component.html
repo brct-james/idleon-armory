@@ -1,1 +1,51 @@
-<app-guide-selector></app-guide-selector>
+<div id="guidesContainer">
+    <app-guide-selector></app-guide-selector>
+    <div id="guide">
+        <div id="guideHeader">
+            <h1>Event Guides</h1>
+            <em>Last updated: v1.11 (February 25, 2021)</em>
+        </div>
+        <hr>
+        <div id="guideContent">
+            <section id="introduction">
+                <h2>Introduction</h2>
+                <p>WIP</p>
+            </section>
+            <hr>
+            <section id="giftmas">
+                <h2>Giftmas (December/January)</h2>
+                <p>Ghosts (1 in 48 from any monster, none offline) - presents from Giftmas Blobulyte (15 per quest), farm monsters for 40 per day, or infinite from ghosts (can come from AFK gains both skilling and fighting). Santa Hat from 1 in 50 that increases to 1 in 300 after the first from presents. Cards can come from presents except ghost card which comes from ghosts. Giftmas foods</p>
+            </section>
+            <hr>
+            <section id="valentines">
+                <h2>Valentines (February/March)</h2>
+                <p>All monsters drop Lovey Dovey Letters, which are both needed for the Loveulyte quest line, and can also be used to summon Valentslimes.</p>
+                <p>Additionally, all monsters drop Choco Boxes, which can be opened for a chance at the Giant Bow Hat, as well as the holiday food (Cherry Choco, Minto Choco, Milk Choco, Lemony Choco).</p>
+            </section>
+        </div>
+    </div>
+    <div id="guideIndex">
+        <h3>Sections</h3>
+        <hr>
+        <ul>
+            <li>
+                <a
+                [routerLink]="['.']"
+                fragment="introduction"
+                (click)="scroll.scrollTo('#introduction', '#guide')">Introduction</a>
+            </li>
+            <li>
+                <a
+                [routerLink]="['.']"
+                fragment="giftmas"
+                (click)="scroll.scrollTo('#giftmas', '#guide')">Giftmas</a>
+            </li>
+            <li>
+                <a
+                [routerLink]="['.']"
+                fragment="valentines"
+                (click)="scroll.scrollTo('#valentines', '#guide')">Valentines</a>
+            </li>
+        </ul>
+    </div>  
+</div> 

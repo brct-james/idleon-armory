@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ScrollToService } from '../../scroll-to.service';
 
 @Component({
-  selector: 'app-events',
-  templateUrl: './events.component.html',
-  styleUrls: ['./events.component.sass']
+  selector: 'app-amarok',
+  templateUrl: './amarok.component.html',
+  styleUrls: ['./amarok.component.sass']
 })
-export class EventsComponent implements OnInit {
+export class AmarokComponent implements OnInit {
 
   constructor(public scroll: ScrollToService) { }
 

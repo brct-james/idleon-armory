@@ -1,1 +1,29 @@
-<app-guide-selector></app-guide-selector>
+<div id="guidesContainer">
+    <app-guide-selector></app-guide-selector>
+    <div id="guide">
+        <div id="guideHeader">
+            <h1>How to Spend Gems</h1>
+            <em>Last updated: v1.11 (February 25, 2021)</em>
+        </div>
+        <hr>
+        <div id="guideContent">
+            <section id="introduction">
+                <h2>Introduction</h2>
+                <p>WIP</p>
+            </section>
+            <hr>
+        </div>
+    </div>
+    <div id="guideIndex">
+        <h3>Sections</h3>
+        <hr>
+        <ul>
+            <li>
+                <a
+                [routerLink]="['.']"
+                fragment="introduction"
+                (click)="scroll.scrollTo('#introduction', '#guide')">Introduction</a>
+            </li>
+        </ul>
+    </div>  
+</div> 
