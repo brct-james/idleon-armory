@@ -51,3 +51,43 @@ hr
     flex-direction: column
     width: 100%
     text-align: center
+.segment
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    text-align: center
+    img
+        margin: 0 0.5em 0 0.5em
+table
+    border-collapse: collapse
+    text-align: center
+    table-layout: fixed
+    margin: 0 auto 1em auto
+    td, th
+        border: 1px solid $main-white
+        padding: 0.5em
+        overflow-wrap: break-word
+        word-break: break-all
+    td
+        overflow-wrap: break-word
+        word-break: break-all
+    tr:nth-child(even)
+        background-color: $leaderboard-even
+    tr:hover
+        background-color: $leaderboard-hover
+    th
+        padding-top: 1em
+        padding-bottom: 1em
+        background-color: $leaderboard-bg
+        color: $main-white
+.tc05
+    width: 5%
+.tc10
+    width: 10%
+.tc15
+    width: 15%
+.tc20
+    width: 20%
+.tc25
+    width: 25%

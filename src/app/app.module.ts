@@ -21,6 +21,7 @@ import { AmarokComponent } from './guides/amarok/amarok.component';
 import { EfauntComponent } from './guides/efaunt/efaunt.component';
 import { BlunderhillsComponent } from './guides/blunderhills/blunderhills.component';
 import { YumYumDesertComponent } from './guides/yum-yum-desert/yum-yum-desert.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { YumYumDesertComponent } from './guides/yum-yum-desert/yum-yum-desert.co
     AmarokComponent,
     EfauntComponent,
     BlunderhillsComponent,
-    YumYumDesertComponent
+    YumYumDesertComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
