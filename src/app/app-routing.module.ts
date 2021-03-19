@@ -14,12 +14,15 @@ import { AmarokComponent } from './guides/amarok/amarok.component';
 import { EfauntComponent } from './guides/efaunt/efaunt.component';
 import { BlunderhillsComponent } from './guides/blunderhills/blunderhills.component';
 import { YumYumDesertComponent } from './guides/yum-yum-desert/yum-yum-desert.component';
+import { SubsystemsComponent } from './subsystems/subsystems.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'character', component: CharacterInformationComponent },
   { path: 'equipment', component: EquipmentComponent },
   { path: 'talents', component: TalentsComponent },
+  { path: 'subsystems-1', component: SubsystemsComponent },
+  { path: 'subsystems-2', component: SubsystemsComponent },
   { path: 'guides', redirectTo: 'guides/tutorial', pathMatch: 'full'},
   { path: 'guides', children: [
     { path: "dailies", component: DailiesComponent },

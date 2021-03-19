@@ -1,19 +1,72 @@
-<h2>Character Information</h2>
-<div id="charListView">
-    <div id="charInfoCard">
-        <div>
-            <div id="charAvatar"><img src='{{"assets/images/ClassCards/" + activeCharacter.class + "Card.png"}}'/></div>
+<div id="pageContainer">
+    <app-sidebar-nav></app-sidebar-nav>
+    <div id="page">
+        <div id="pageHeader">
+            <h1>Overview</h1>
+            <em>Last updated: v1.00 (March 19, 2021)</em>
         </div>
-        <div id="charInfoSection">
-            <div id="charName"><input (focus)="$event.target.select()" maxlength="16" class="nameInput" (input)="onNameChange($event.target)" value="{{activeCharacter.name}}"/></div>
-            <div id="charClass">
-                <img src='{{ "assets/images/TalentTabs/TabIcons/" + activeCharacter.class + ".png"}}' />
-                <select (change)="onClassChange($event.target)">
-                <option *ngFor="let class of listOfClasses" [selected]="class === activeCharacter.class">{{class}}</option>
-                </select>
-                <img src='{{ "assets/images/TalentTabs/TabIcons/" + activeCharacter.class + ".png"}}' />
+        <hr />
+        <div id="pageContent">
+            <div id="charListView">
+                <div id="charInfoCard">
+                    <div>
+                        <div id="charAvatar">
+                            <img
+                                src="{{
+                                    'assets/images/ClassCards/' +
+                                        activeCharacter.class +
+                                        'Card.png'
+                                }}"
+                            />
+                        </div>
+                    </div>
+                    <div id="charInfoSection">
+                        <div id="charName">
+                            <input
+                                (focus)="$event.target.select()"
+                                maxlength="16"
+                                class="nameInput"
+                                (input)="onNameChange($event.target)"
+                                value="{{ activeCharacter.name }}"
+                            />
+                        </div>
+                        <div id="charClass">
+                            <img
+                                src="{{
+                                    'assets/images/TalentTabs/TabIcons/' +
+                                        activeCharacter.class +
+                                        '.png'
+                                }}"
+                            />
+                            <select (change)="onClassChange($event.target)">
+                                <option
+                                    *ngFor="let class of listOfClasses"
+                                    [selected]="class === activeCharacter.class"
+                                >
+                                    {{ class }}
+                                </option>
+                            </select>
+                            <img
+                                src="{{
+                                    'assets/images/TalentTabs/TabIcons/' +
+                                        activeCharacter.class +
+                                        '.png'
+                                }}"
+                            />
+                        </div>
+                        <div id="charMainLevel">
+                            Main Lv
+                            <input
+                                (focus)="$event.target.select()"
+                                class="levInput"
+                                type="number"
+                                (input)="onLevChange($event.target)"
+                                value="{{ activeCharacter.level }}"
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="charMainLevel">Main Lv <input (focus)="$event.target.select()" class="levInput" type="number" (input)="onLevChange($event.target)" value="{{activeCharacter.level}}"/></div>
         </div>
     </div>
 </div>

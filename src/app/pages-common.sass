@@ -1,0 +1,93 @@
+@import './variables.sass'
+hr
+    border-top: 1px solid $main-grey
+    width: 100%
+#pageContainer
+    display: flex
+    flex-direction: row
+    height: $guide-height
+#page
+    display: flex
+    flex-direction: column
+    width: calc(100% - 10px)
+    scroll-behavior: smooth
+    overflow-y: scroll
+    padding: 0 0.75em 0 0.75em
+#pageHeader
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    h1
+        margin: 0.5em auto 0.25em 0
+        color: $dark-blue
+        font-family: ExpletusSans, Arial
+        font-weight: 700
+        font-size: 2em
+    em
+        align-self: flex-end
+        font-size: 0.8em
+#pageIndex
+    display: flex
+    flex-direction: column
+    align-self: flex-start
+    justify-content: center
+    text-align: center
+    margin: 1em 0 0 0.5em
+    width: 200px
+    h3
+        margin: 0
+    ul
+        list-style-type: none
+        margin: 0
+        padding: 0
+    li
+        margin: 0.75em 0 0 0
+        a
+            color: $dark-blue
+        a:visited
+            color: $dark-blue
+#pageContent
+    display: flex
+    flex-direction: column
+    width: 100%
+    text-align: center
+.segment
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    text-align: center
+    img
+        margin: 0 0.5em 0 0.5em
+table
+    border-collapse: collapse
+    text-align: center
+    table-layout: fixed
+    margin: 0 auto 1em auto
+    td, th
+        border: 1px solid $main-white
+        padding: 0.5em
+        overflow-wrap: break-word
+        word-break: break-all
+    td
+        overflow-wrap: break-word
+        word-break: break-all
+    tr:nth-child(even)
+        background-color: $leaderboard-even
+    tr:hover
+        background-color: $leaderboard-hover
+    th
+        padding-top: 1em
+        padding-bottom: 1em
+        background-color: $leaderboard-bg
+        color: $main-white
+.tc05
+    width: 5%
+.tc10
+    width: 10%
+.tc15
+    width: 15%
+.tc20
+    width: 20%
+.tc25
+    width: 25%

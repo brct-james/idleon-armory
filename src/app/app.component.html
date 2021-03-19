@@ -2,10 +2,7 @@
     <h1>{{title}}</h1>
     <div class="navLinks">
         <a class="specialLink" routerLink="/guides" [routerLinkActive]="['active']">Guides</a>
-        <a routerLink="/" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Dashboard</a>
-        <a routerLink="/character" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Character</a>
-        <a routerLink="/equipment" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Equipment</a>
-        <a routerLink="/talents" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Talents</a>
+        <a routerLink="/" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Builds</a>
     </div>
     <app-character-selector></app-character-selector>
 </nav>

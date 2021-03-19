@@ -1,49 +1,80 @@
-<h2>Dashboard: <span id="reset" (click)="clearStorage()">ResetCharsToDefault</span></h2>
-<div id="charListView">
-  <h3>List of Characters</h3>
-  <div class="centerText">
-    <span>Account Level: {{accountLevel}}</span>
-  </div>
-  <div class="centerText">
-    <em>(Sum of all characters' Main Levels)</em>
-  </div>
-  <div class="characterList">
-    <div *ngFor="let char of characters" class="charCardContainer">
-      <div class="module" (click)="activate(char)" routerLink="/character">
-        <div>
-          <strong>{{char.name}}</strong>
+<div id="pageContainer">
+    <app-sidebar-nav></app-sidebar-nav>
+    <div id="page">
+        <div id="pageHeader">
+            <h1>Dashboard</h1>
+            <em>Last updated: v1.00 (March 19, 2021)</em>
+            <span id="reset" (click)="clearStorage()">ResetCharsToDefault</span>
         </div>
-        <div class="classLevContainer">
-          <img src='{{ "assets/images/TalentTabs/TabIcons/" + char.class + ".png"}}' />
-          <span>{{char.class}}</span>
-          <img src='{{ "assets/images/TalentTabs/TabIcons/" + char.class + ".png"}}' />
+        <hr />
+        <div id="pageContent">
+            <div id="charListView">
+                <h3>List of Characters</h3>
+                <div class="centerText">
+                    <span>Account Level: {{ accountLevel }}</span>
+                </div>
+                <div class="centerText">
+                    <em>(Sum of all characters' Main Levels)</em>
+                </div>
+                <div class="characterList">
+                    <div
+                        *ngFor="let char of characters"
+                        class="charCardContainer"
+                    >
+                        <div
+                            class="module"
+                            (click)="activate(char)"
+                            routerLink="/character"
+                        >
+                            <div>
+                                <strong>{{ char.name }}</strong>
+                            </div>
+                            <div class="classLevContainer">
+                                <img
+                                    src="{{
+                                        'assets/images/TalentTabs/TabIcons/' +
+                                            char.class +
+                                            '.png'
+                                    }}"
+                                />
+                                <span>{{ char.class }}</span>
+                                <img
+                                    src="{{
+                                        'assets/images/TalentTabs/TabIcons/' +
+                                            char.class +
+                                            '.png'
+                                    }}"
+                                />
+                            </div>
+                            <span>Lv {{ char.level }}</span>
+                        </div>
+                        <div class="charListOptions noselect">
+                            <div
+                                [class.active]="isEqual(char, activeCharacter)"
+                                (click)="activate(char)"
+                            >
+                                <span *ngIf="!isEqual(char, activeCharacter)"
+                                    >Set
+                                </span>
+                                Active
+                            </div>
+                            <div class="active">Reorder</div>
+                            <div (click)="delete(char)">Delete</div>
+                        </div>
+                    </div>
+                    <div class="charCardContainer noselect">
+                        <div
+                            id="addCharPlaceholder"
+                            (click)="addNewChar()"
+                            [class.cantCreate]="accountLevel < nextSlotReq"
+                        >
+                            <span>Character #{{ characters.length + 1 }}</span>
+                            <span class="plus">+</span>
+                            <span>Need {{ nextSlotReq }} Account Level</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <span>Lv {{char.level}}</span>
-      </div>
-      <div class="charListOptions noselect">
-        <div
-        [class.active]="isEqual(char, activeCharacter)"
-        (click)="activate(char)">
-          <span *ngIf="!isEqual(char, activeCharacter)">Set </span>
-          Active
-        </div>
-        <div class="active">
-          Reorder
-        </div>
-        <div (click)="delete(char)">
-          Delete
-        </div>
-      </div>
     </div>
-    <div class="charCardContainer noselect">
-      <div
-      id="addCharPlaceholder"
-      (click)="addNewChar()"
-      [class.cantCreate]="accountLevel < nextSlotReq">
-        <span>Character #{{characters.length + 1}}</span>
-        <span class="plus">+</span>
-        <span>Need {{nextSlotReq}} Account Level</span>
-      </div>
-    </div>
-  </div>
 </div>

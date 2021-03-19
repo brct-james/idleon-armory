@@ -1,134 +1,137 @@
-#skillsContainer 
-	display: flex 
-	align-items: center 
-#skillsBGContainer 
-	position: relative 
-#skillTabsContainer 
-	position: absolute 
-	top: 10px 
-	left: 0px
-	width: 362px
-#skillTabsRow 
-	position: absolute 
-	margin: 0 
-	padding: 0 
-	list-style-type: none 
-	display: flex 
-	flex-direction: row 
-	justify-content: flex-start
-	width: 100%
-	.uiTab 
-		margin-left: 6px 
-		&:hover 
-			filter: brightness(1.15) 
-			cursor: pointer 
-	.inactiveTab 
-		filter: brightness(0.5) 
-	#specials1Tab
-		margin-left: auto
-#talentsContainer 
-	position: absolute 
-	top: 80px 
-	left: 17px 
-.talentsRow 
-	display: flex 
-	margin: 0 0 15px 0 
-	padding: 0 
-	list-style-type: none 
-	display: flex 
-	flex-direction: row 
-	li 
-		display: flex 
-		flex-direction: column 
-.uiTalent 
-	margin-left: 8px 
-	&:hover 
-		filter: brightness(1.15) 
-		cursor: pointer 
-#tabInfoContainer 
-	position: absolute 
-	top: 290px 
-	left: 0px 
-	width: 362px 
-	display: flex 
-	flex-direction: column 
-	align-items: center 
-	color: white 
-#classNameContainer 
-	display: flex 
-	flex-direction: row 
-	align-items: center 
-	font-size: 14px 
-#availPtsContainer 
-	font-size: 14px 
-	margin: 0.25em 0 
-#familyBonusContainer 
-	font-size: 12px 
-	margin: 1.5em 0 0 0 
-#className 
-	margin: 0 0.5em 
-#talentInfoContainer 
-	position: absolute 
-	top: 290px 
-	left: 0px 
-	width: 362px 
-	height: 100px 
-	display: flex 
-	flex-direction: row 
-	align-items: center 
-	color: white 
-#talentImageContainer 
-	display: flex 
-	flex-direction: column 
-	align-items: center 
-	margin-left: 7px 
-	text-align: center 
-	width: 80px 
-	font-size: 14px 
-#talentImage 
-	margin-bottom: 2px 
-#talentTextContainer 
-	display: flex 
-	flex-direction: column 
-	justify-content: space-between 
-	width: 180px 
-	height: 90px 
-	margin: 0 4px 
-	font-size: 12px 
-	div 
-		display: flex 
-		flex-direction: column 
-		align-items: flex-start 
-#talentDescription 
-	padding-left: 0.75em 
-#talentUpgradeDescription 
-	padding-left: 0.75em 
-#talentUpgradeContainer 
-	display: flex 
-	flex-direction: column 
-	align-items: center 
-	text-align: center 
-	width: 75px 
-	margin-right: 10px 
-	font-size: 14px 
-	font-weight: bold 
-#talentUpgradeBtn 
-	margin-bottom: 2px 
-	cursor: pointer 
-.talentLvContainer 
-	position: absolute 
-	span 
-		position: absolute 
-		top: 47px 
-		left: 14px 
-		text-align: center 
-		width: 44px 
-		font-size: 12px 
-		font-weight: bold 
-		color: white 
-		text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000 
-.uiTalentLv 
-	position: absolute 
-	top: 45px 
-	left: 14px 
-	filter: brightness(0.85) 
+@import '../variables.sass'
+@import "../pages-common.sass"
+
+#skillsContainer
+    display: flex
+    align-items: center
+#skillsBGContainer
+    position: relative
+#skillTabsContainer
+    position: absolute
+    top: 10px
+    left: 0px
+    width: 362px
+#skillTabsRow
+    position: absolute
+    margin: 0
+    padding: 0
+    list-style-type: none
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    width: 100%
+    .uiTab
+        margin-left: 6px
+        &:hover
+            filter: brightness(1.15)
+            cursor: pointer
+    .inactiveTab
+        filter: brightness(0.5)
+    #specials1Tab
+        margin-left: auto
+#talentsContainer
+    position: absolute
+    top: 80px
+    left: 17px
+.talentsRow
+    display: flex
+    margin: 0 0 15px 0
+    padding: 0
+    list-style-type: none
+    display: flex
+    flex-direction: row
+    li
+        display: flex
+        flex-direction: column
+.uiTalent
+    margin-left: 8px
+    &:hover
+        filter: brightness(1.15)
+        cursor: pointer
+#tabInfoContainer
+    position: absolute
+    top: 290px
+    left: 0px
+    width: 362px
+    display: flex
+    flex-direction: column
+    align-items: center
+    color: white
+#classNameContainer
+    display: flex
+    flex-direction: row
+    align-items: center
+    font-size: 14px
+#availPtsContainer
+    font-size: 14px
+    margin: 0.25em 0
+#familyBonusContainer
+    font-size: 12px
+    margin: 1.5em 0 0 0
+#className
+    margin: 0 0.5em
+#talentInfoContainer
+    position: absolute
+    top: 290px
+    left: 0px
+    width: 362px
+    height: 100px
+    display: flex
+    flex-direction: row
+    align-items: center
+    color: white
+#talentImageContainer
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-left: 7px
+    text-align: center
+    width: 80px
+    font-size: 14px
+#talentImage
+    margin-bottom: 2px
+#talentTextContainer
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 180px
+    height: 90px
+    margin: 0 4px
+    font-size: 12px
+    div
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+#talentDescription
+    padding-left: 0.75em
+#talentUpgradeDescription
+    padding-left: 0.75em
+#talentUpgradeContainer
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    width: 75px
+    margin-right: 10px
+    font-size: 14px
+    font-weight: bold
+#talentUpgradeBtn
+    margin-bottom: 2px
+    cursor: pointer
+.talentLvContainer
+    position: absolute
+    span
+        position: absolute
+        top: 47px
+        left: 14px
+        text-align: center
+        width: 44px
+        font-size: 12px
+        font-weight: bold
+        color: white
+        text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000
+.uiTalentLv
+    position: absolute
+    top: 45px
+    left: 14px
+    filter: brightness(0.85)

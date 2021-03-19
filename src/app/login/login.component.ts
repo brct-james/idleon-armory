@@ -26,10 +26,11 @@ export class LoginComponent implements OnInit {
         const val = this.form.value;
 
         if (val.email && val.password) {
-            this.authService.login(val.email, val.password).subscribe(() => {
+            //Commenting out for now as I've postponed getting auth working in lieu of fixing the rest of the site
+            /*this.authService.login(val.email, val.password).subscribe(() => {
                 console.log('User is logged in');
                 this.router.navigateByUrl('/');
-            });
+            });*/
         }
     }
 

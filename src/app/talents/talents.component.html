@@ -1,46 +1,71 @@
-<app-character-information></app-character-information>
-<h2>Talents</h2>
-<div id="skillsContainer">
-    <div id="skillsBGContainer">
-        <img src="./assets/images/UI/Talents/UIskills.png" id="skillsBase" draggable='false'/>
-        <div id="skillTabsContainer">
-            <ul id="skillTabsRow">
-                <li
-                *ngFor="let tab of talentTabs"
-                [class.noDisplay]="!activeClass.talentTabNames.includes(tab.name)"
-                [class.inactiveTab]="activeTab !== tab.name"
-                class="uiTab"
-                id="{{camelize(tab.name)}}Tab"
-                (click)="tTabClicked(tab.name)">
-                    <img
-                    src="./assets/images/TalentTabs/Tabs/{{tab.name}}.png"
-                    draggable='false'/>
-                </li>
-            </ul>
+<div id="pageContainer">
+    <app-sidebar-nav></app-sidebar-nav>
+    <div id="page">
+        <div id="pageHeader">
+            <h1>Talents</h1>
+            <em>Last updated: v1.00 (March 19, 2021)</em>
         </div>
-        <div id="talentsContainer">
-            <ul
-            *ngFor="let rowNum of [0, 1, 2]"
-            class="talentsRow">
-                <li
-                *ngFor="let colNum of [0, 1, 2, 3, 4]">
+        <hr />
+        <div id="pageContent">
+            <div id="skillsContainer">
+                <div id="skillsBGContainer">
                     <img
-                    *ngIf="this.jsonService.talentsLoaded"
-                    src="./assets/images/TalentTabs/Talents/{{activeTalents[(rowNum*5) + colNum].name}}.png"
-                    class="uiTalent"
-                    id="talent{{(rowNum*5) + colNum}}"
-                    (click)="talentClicked((rowNum*5) + colNum)"
-                    draggable='false'/>
-                    <div class="talentLvContainer noDisplay">
-                        <img
-                        src="./assets/images/UI/Talents/UISkillLv.png"
-                        class="uiTalentLv"
-                        draggable='false'/>
-                        <span id="talent{{(rowNum*5) + colNum}}Level">100</span>
+                        src="./assets/images/UI/Talents/UIskills.png"
+                        id="skillsBase"
+                        draggable="false"
+                    />
+                    <div id="skillTabsContainer">
+                        <ul id="skillTabsRow">
+                            <li
+                                *ngFor="let tab of talentTabs"
+                                [class.noDisplay]="
+                                    !activeClass.talentTabNames.includes(
+                                        tab.name
+                                    )
+                                "
+                                [class.inactiveTab]="activeTab !== tab.name"
+                                class="uiTab"
+                                id="{{ camelize(tab.name) }}Tab"
+                                (click)="tTabClicked(tab.name)"
+                            >
+                                <img
+                                    src="./assets/images/TalentTabs/Tabs/{{
+                                        tab.name
+                                    }}.png"
+                                    draggable="false"
+                                />
+                            </li>
+                        </ul>
                     </div>
-                </li>
-            </ul>
-                <!-- <li>
+                    <div id="talentsContainer">
+                        <ul *ngFor="let rowNum of [0, 1, 2]" class="talentsRow">
+                            <li *ngFor="let colNum of [0, 1, 2, 3, 4]">
+                                <img
+                                    *ngIf="this.jsonService.talentsLoaded"
+                                    src="./assets/images/TalentTabs/Talents/{{
+                                        activeTalents[rowNum * 5 + colNum].name
+                                    }}.png"
+                                    class="uiTalent"
+                                    id="talent{{ rowNum * 5 + colNum }}"
+                                    (click)="talentClicked(rowNum * 5 + colNum)"
+                                    draggable="false"
+                                />
+                                <div class="talentLvContainer noDisplay">
+                                    <img
+                                        src="./assets/images/UI/Talents/UISkillLv.png"
+                                        class="uiTalentLv"
+                                        draggable="false"
+                                    />
+                                    <span
+                                        id="talent{{
+                                            rowNum * 5 + colNum
+                                        }}Level"
+                                        >100</span
+                                    >
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- <li>
                     <img src="./assets/images/UI/Talents/UnknownSkill.png" class="uiTalent" id="talent0" onclick="talentClicked(0)" draggable='false'/>
                     <div class="talentLvContainer noDisplay">
                         <img src="./assets/images/UI/Talents/UISkillLv.png" class="uiTalentLv" draggable='false'/>
@@ -150,38 +175,76 @@
                     </div>
                 </li>
             </ul> -->
-        </div>
-        <div id="tabInfoContainer">
-            <div id="classNameContainer" class="noDisplay textShadow">
-                <img src="./assets/images/TalentTabs/TabIcons/Beginner.png" id="classImageLeft" draggable='false'/>
-                <span id="className">Beginner</span>
-                <img src="./assets/images/TalentTabs/TabIcons/Beginner.png" id="classImageRight" draggable='false'/>
-            </div>
-            <div id="availPtsContainer" class="noDisplay">
-                <span id="availablePoints">Available Points: </span>
-            </div>
-            <div id="familyBonusContainer" class="noDisplay textShadow">
-                <span id="familyBonus">FAMILY BONUS: </span>
-            </div>
-        </div>
-        <div id="talentInfoContainer" class="noDisplay">
-            <div id="talentImageContainer">
-                <img src="./assets/images/TalentTabs/Talents/Health Booster.png" id="talentImage" draggable='false'/>
-                <span id="talentLevelText" class="textShadow">LV 100/100</span>
-            </div>
-            <div id="talentTextContainer">
-                <div>
-                    <span id="talentName" class="textShadow">HEALTH BOOSTER</span>
-                    <span id="talentDescription">Increases Max HP by 0</span>
+                    </div>
+                    <div id="tabInfoContainer">
+                        <div
+                            id="classNameContainer"
+                            class="noDisplay textShadow"
+                        >
+                            <img
+                                src="./assets/images/TalentTabs/TabIcons/Beginner.png"
+                                id="classImageLeft"
+                                draggable="false"
+                            />
+                            <span id="className">Beginner</span>
+                            <img
+                                src="./assets/images/TalentTabs/TabIcons/Beginner.png"
+                                id="classImageRight"
+                                draggable="false"
+                            />
+                        </div>
+                        <div id="availPtsContainer" class="noDisplay">
+                            <span id="availablePoints">Available Points: </span>
+                        </div>
+                        <div
+                            id="familyBonusContainer"
+                            class="noDisplay textShadow"
+                        >
+                            <span id="familyBonus">FAMILY BONUS: </span>
+                        </div>
+                    </div>
+                    <div id="talentInfoContainer" class="noDisplay">
+                        <div id="talentImageContainer">
+                            <img
+                                src="./assets/images/TalentTabs/Talents/Health Booster.png"
+                                id="talentImage"
+                                draggable="false"
+                            />
+                            <span id="talentLevelText" class="textShadow"
+                                >LV 100/100</span
+                            >
+                        </div>
+                        <div id="talentTextContainer">
+                            <div>
+                                <span id="talentName" class="textShadow"
+                                    >HEALTH BOOSTER</span
+                                >
+                                <span id="talentDescription"
+                                    >Increases Max HP by 0</span
+                                >
+                            </div>
+                            <div>
+                                <span id="talentNextLv" class="textShadow"
+                                    >NEXT LV</span
+                                >
+                                <span id="talentUpgradeDescription"
+                                    >+1.2 HP</span
+                                >
+                            </div>
+                        </div>
+                        <div id="talentUpgradeContainer">
+                            <img
+                                src="./assets/images/UI/Talents/UpgradeSkill.png"
+                                id="talentUpgradeBtn"
+                                onclick="checkUpgradeTalent()"
+                                draggable="false"
+                            />
+                            <span id="talentPointsLeft" class="textShadow"
+                                >POINTS LEFT: 1000</span
+                            >
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <span id="talentNextLv" class="textShadow">NEXT LV</span>
-                    <span id="talentUpgradeDescription">+1.2 HP</span>
-                </div>
-            </div>
-            <div id="talentUpgradeContainer">
-                <img src="./assets/images/UI/Talents/UpgradeSkill.png" id="talentUpgradeBtn" onclick="checkUpgradeTalent()" draggable='false'/>
-                <span id="talentPointsLeft" class="textShadow">POINTS LEFT: 1000</span>
             </div>
         </div>
     </div>

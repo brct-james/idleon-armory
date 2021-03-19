@@ -1,11 +1,25 @@
-<app-character-information></app-character-information>
-<h2>Equipment</h2>
-<div>
-    <div id="BISEquipsContainer" *ngIf="categories && items && activeCharacter">
-        <app-equipment-category
-        *ngFor="let category of categories"
-        [category]="category"
-        [items]="items"
-        [char]="activeCharacter"></app-equipment-category>
+<div id="pageContainer">
+    <app-sidebar-nav></app-sidebar-nav>
+    <div id="page">
+        <div id="pageHeader">
+            <h1>Equipment</h1>
+            <em>Last updated: v1.00 (March 19, 2021)</em>
+        </div>
+        <hr />
+        <div id="pageContent">
+            <div>
+                <div
+                    id="BISEquipsContainer"
+                    *ngIf="categories && items && activeCharacter"
+                >
+                    <app-equipment-category
+                        *ngFor="let category of categories"
+                        [category]="category"
+                        [items]="items"
+                        [char]="activeCharacter"
+                    ></app-equipment-category>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

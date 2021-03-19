@@ -1,0 +1,36 @@
+@import '../variables.sass'
+#sidebar
+    height: 100%
+    overflow-y: scroll
+    background-color: $hover-grey
+#navList
+    width: $sidebar-width
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 0.5em
+.navPreview
+    display: flex
+    flex-direction: row
+    width: $guide-preview-width
+    align-items: center
+    justify-content: center
+    background-color: $main-white
+    margin-bottom: 0.5em
+    cursor: pointer
+    img
+        width: $guide-preview-image-dimensions
+        height: $guide-preview-image-dimensions
+        margin: 0.5em 0em 0.5em 0.5em
+    &.active
+        background-color: $light-yellow
+.previewText
+    display: flex
+    flex-direction: column
+    margin: 0.5em 0.5em 0.5em 0.5em
+    align-items: center
+    justify-content: center
+    text-align: center
+.specialLink
+    background-color: $main-red
+    color: $main-white

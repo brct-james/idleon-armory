@@ -22,6 +22,8 @@ import { EfauntComponent } from './guides/efaunt/efaunt.component';
 import { BlunderhillsComponent } from './guides/blunderhills/blunderhills.component';
 import { YumYumDesertComponent } from './guides/yum-yum-desert/yum-yum-desert.component';
 import { LoginComponent } from './login/login.component';
+import { SidebarNavComponent } from './sidebar-nav/sidebar-nav.component';
+import { SubsystemsComponent } from './subsystems/subsystems.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { LoginComponent } from './login/login.component';
     EfauntComponent,
     BlunderhillsComponent,
     YumYumDesertComponent,
-    LoginComponent
+    LoginComponent,
+    SidebarNavComponent,
+    SubsystemsComponent
   ],
   imports: [
     BrowserModule,

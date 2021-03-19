@@ -1,0 +1,20 @@
+<div id="sidebar">
+    <div id="navList">
+        <div
+        *ngFor="let navLink of navLinks"
+        (click)="activate(navLink.id)"
+        id="{{'navLink-'+navLink.id}}"
+        class="navPreview noselect"
+        [active]="navLink.active"
+        [ngClass]="{'specialLink': navLink.id == 100}"
+        routerLink="{{'/'+navLink.url}}"
+        [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{ exact: true }">
+            <img src='{{ "assets/images/" + navLink.previewImage}}' draggable="false"/>
+            <div class="previewText">
+                <strong>{{navLink.name}}</strong>
+                <p>{{navLink.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
