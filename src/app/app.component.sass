@@ -3,11 +3,23 @@
 h1
     font-size: 3em
     line-height: 0.8em
-    margin: 0.25em
     text-align: center
     color: $main-red
     font-family: ExpletusSans, Arial
     font-weight: 700
+    margin: auto 0
+img
+    height: 1.2em
+    width: 1.2em
+    margin-right: 0.25em
+    font-size: 3em
+#titleContainer
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    margin: 0.5em
+    margin-top: auto
 nav
     display: flex
     flex-direction: row
@@ -17,9 +29,11 @@ nav
     height: $nav-height
     a
         margin-right: 1em
+        margin-top: 1em
         padding: 1em
         display: block
         text-decoration: none
+        background-color: $main-grey
         color: $main-white
         font-weight: bold
         border-radius: 4px 4px 0 0
@@ -29,12 +43,19 @@ nav
             background-color: $main-green
         &#buildsLink
             background-color: $main-blue
+        &#apiLink
+            background-color: $main-yellow
+        &#speedrunLink
+            background-color: $main-orange
+            white-space: nowrap
+            i
+                margin-left: 0.25em
         &:hover
-            color: $main-white
-            background-color: $main-grey
+            margin-top: 0em
+            padding-bottom: 2em
         &.active
-            color: $main-white
-            background-color: $mid-grey
+            margin-top: 0em
+            padding-bottom: 2em
 .navLinks
     max-width: 98vw
     display: flex

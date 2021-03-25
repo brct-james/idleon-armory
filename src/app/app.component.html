@@ -1,9 +1,26 @@
 <nav>
-    <h1>{{title}}</h1>
+    <div id="titleContainer">
+        <img src="assets/images/IA_Shield.png" />
+        <h1>{{ title }}</h1>
+    </div>
     <div class="navLinks">
-        <a id="homeLink" routerLink="/" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-        <a id="guidesLink" routerLink="/g" [routerLinkActive]="['active']">Guides</a>
-        <a id="buildsLink" routerLink="/b" [routerLinkActive]="['active']">Builds</a>
+        <a
+            id="homeLink"
+            routerLink="/"
+            [routerLinkActive]="['active']"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home
+        </a>
+        <a id="guidesLink" routerLink="/g" [routerLinkActive]="['active']"
+            >Guides</a
+        >
+        <a id="buildsLink" routerLink="/b" [routerLinkActive]="['active']"
+            >Builds</a
+        >
+        <a id="apiLink" routerLink="/a" [routerLinkActive]="['active']">API</a>
+        <a id="speedrunLink" href="https://idleonspeedruns.com/" target="_blank"
+            >Speedruns<i class="fas fa-external-link-alt"></i
+        ></a>
     </div>
     <app-character-selector></app-character-selector>
 </nav>

@@ -18,9 +18,14 @@ import { BlunderHillsComponent } from './blunder-hills/blunder-hills.component';
 import { YumYumDesertComponent } from './yum-yum-desert/yum-yum-desert.component';
 import { CardsComponent } from './cards/cards.component';
 import { HomeComponent } from './home/home.component';
+import { ApiComponent } from './api/api.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'a', redirectTo: 'a/instructions', pathMatch: 'full'},
+  { path: 'a', children: [
+    { path: "instructions", component: ApiComponent },
+  ]},
   { path: 'b', redirectTo: 'b/dashboard', pathMatch: 'full'},
   { path: 'b', children: [
     { path: "dashboard", component: DashboardComponent },

@@ -27,6 +27,7 @@ import { BlunderHillsComponent } from './blunder-hills/blunder-hills.component';
 import { YumYumDesertComponent } from './yum-yum-desert/yum-yum-desert.component';
 import { CardsComponent } from './cards/cards.component';
 import { HomeComponent } from './home/home.component';
+import { ApiComponent } from './api/api.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { HomeComponent } from './home/home.component';
     BlunderHillsComponent,
     YumYumDesertComponent,
     CardsComponent,
-    HomeComponent
+    HomeComponent,
+    ApiComponent
   ],
   imports: [
     BrowserModule,
