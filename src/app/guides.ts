@@ -50,10 +50,10 @@ export const guides = [
     },
     {
         id: 7,
-        name: 'Blunderhills Guide',
+        name: 'Blunder Hills Guide',
         previewImage: 'blunderhills.png',
-        url: 'blunderhills',
-        description: 'All about Blunderhills and the features it contains.'
+        url: 'blunder-hills',
+        description: 'All about Blunder Hills and the features it contains.'
     },
     {
         id: 8,

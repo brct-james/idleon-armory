@@ -1,8 +1,7 @@
 <div id="sidebar">
-    <div id="navList">
+    <div id="navList" #navList>
         <div
         *ngFor="let navLink of navLinks"
-        (click)="activate(navLink.id)"
         id="{{'navLink-'+navLink.id}}"
         class="navPreview noselect"
         [active]="navLink.active"

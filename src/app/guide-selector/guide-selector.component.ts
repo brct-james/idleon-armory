@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ScrollToService } from '../scroll-to.service';
 
 import { guides } from '../guides';
 
@@ -7,12 +9,16 @@ import { guides } from '../guides';
   templateUrl: './guide-selector.component.html',
   styleUrls: ['./guide-selector.component.sass']
 })
-export class GuideSelectorComponent implements OnInit {
+export class GuideSelectorComponent implements AfterViewInit {
   guides = guides;
+  activeUrl = "";
   
-  constructor() { }
+  constructor(public scroll: ScrollToService, private route: ActivatedRoute) { }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+    this.route.url.subscribe(url => url.length > 0 ? this.activeUrl = url[0].path : null);
+    let activeLink = guides.filter(item => item.url == this.activeUrl)[0];
+    this.scroll.scrollTo("#guide-" + activeLink.id, "#sidebar", true);
   }
 
 }

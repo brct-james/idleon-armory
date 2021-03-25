@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ScrollToService } from '../../scroll-to.service';
 
 @Component({
-  selector: 'app-yum-yum-desert',
+  selector: 'app-yum-yum-desert-guide',
   templateUrl: './yum-yum-desert.component.html',
   styleUrls: ['./yum-yum-desert.component.sass']
 })
-export class YumYumDesertComponent implements OnInit {
+export class YumYumDesertGuideComponent implements OnInit {
 
   constructor(public scroll: ScrollToService) { }
 

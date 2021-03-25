@@ -19,11 +19,13 @@ import { GemsComponent } from './guides/gems/gems.component';
 import { DailiesComponent } from './guides/dailies/dailies.component';
 import { AmarokComponent } from './guides/amarok/amarok.component';
 import { EfauntComponent } from './guides/efaunt/efaunt.component';
-import { BlunderhillsComponent } from './guides/blunderhills/blunderhills.component';
-import { YumYumDesertComponent } from './guides/yum-yum-desert/yum-yum-desert.component';
+import { BlunderhillsGuideComponent } from './guides/blunderhills/blunderhills.component';
+import { YumYumDesertGuideComponent } from './guides/yum-yum-desert/yum-yum-desert.component';
 import { LoginComponent } from './login/login.component';
 import { SidebarNavComponent } from './sidebar-nav/sidebar-nav.component';
-import { SubsystemsComponent } from './subsystems/subsystems.component';
+import { BlunderHillsComponent } from './blunder-hills/blunder-hills.component';
+import { YumYumDesertComponent } from './yum-yum-desert/yum-yum-desert.component';
+import { CardsComponent } from './cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -42,11 +44,13 @@ import { SubsystemsComponent } from './subsystems/subsystems.component';
     DailiesComponent,
     AmarokComponent,
     EfauntComponent,
-    BlunderhillsComponent,
-    YumYumDesertComponent,
+    BlunderhillsGuideComponent,
+    YumYumDesertGuideComponent,
     LoginComponent,
     SidebarNavComponent,
-    SubsystemsComponent
+    BlunderHillsComponent,
+    YumYumDesertComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,

@@ -2,44 +2,51 @@ export const navLinks = [
     {
         id: 0,
         name: 'Dashboard',
-        previewImage: '/Guides/Previews/tutorial.png',
+        previewImage: '/Nav/DashboardIcon.png',
         url: '',
         description: 'Create or edit your own builds, or view Featured Builds from community members.'
     },
     {
         id: 1,
         name: 'Overview',
-        previewImage: '/Guides/Previews/tutorial.png',
+        previewImage: '/Nav/OverviewIcon.png',
         url: 'character',
-        description: 'View general info about this build including detailed stats.'
+        description: 'Setup character basics like class & level, plus view detailed stats.'
     },
     {
         id: 2,
         name: 'Equipment',
-        previewImage: '/Guides/Previews/tutorial.png',
+        previewImage: '/Nav/EquipmentIcon.png',
         url: 'equipment',
-        description: ''
+        description: 'Edit equipment loadout.'
     },
     {
         id: 3,
         name: 'Talents',
-        previewImage: '/Guides/Previews/tutorial.png',
+        previewImage: '/Nav/TalentsIcon.png',
         url: 'talents',
-        description: ''
+        description: 'Edit talent level values & ranges.'
     },
     {
         id: 4,
-        name: 'World 1 Subsystems',
-        previewImage: '/Guides/Previews/tutorial.png',
-        url: 'subsystems-1',
-        description: ''
+        name: 'Cards',
+        previewImage: '/Nav/CardsIcon.png',
+        url: 'cards',
+        description: 'Edit equipped cards & card sets.'
     },
     {
         id: 5,
-        name: 'World 2 Subsystems',
-        previewImage: '/Guides/Previews/tutorial.png',
-        url: 'subsystems-2',
-        description: ''
+        name: 'Blunder Hills Subsystems',
+        previewImage: '/Nav/BlunderHillsSubsystemsIcon.png',
+        url: 'blunder-hills',
+        description: 'Star signs, statues, stamps, and task shop.'
+    },
+    {
+        id: 6,
+        name: 'Yum-Yum Desert Subsystems',
+        previewImage: '/Nav/YumYumDesertSubsystemsIcon.png',
+        url: 'yum-yum-desert',
+        description: 'Obols, post office, and task shop.'
     },
     {
         id: 100,

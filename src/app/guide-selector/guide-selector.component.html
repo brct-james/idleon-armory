@@ -2,7 +2,6 @@
     <div id="guideList">
         <div
         *ngFor="let guide of guides"
-        (click)="activate(guide.id)"
         id="{{'guide-'+guide.id}}"
         class="guidePreview noselect"
         [active]="guide.active"
