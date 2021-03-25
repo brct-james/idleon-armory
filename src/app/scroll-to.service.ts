@@ -26,16 +26,16 @@ export class ScrollToService {
         if (toMid) {
             offsetModifier = container.offsetHeight / 2;
         }
-        console.log(element.offsetTop, container.scrollTop, "offsetModifier:", offsetModifier);
+        // console.log(element.offsetTop, container.scrollTop, "offsetModifier:", offsetModifier);
         if (element.offsetTop != container.scrollTop) {
             container.scrollTop = element.offsetTop - offsetModifier;
-            console.log('scroll1');
+            // console.log('scroll1');
         } else {
-            console.log('scroll2');
+            // console.log('scroll2');
             const offsetBottom = element.offsetTop + element.offsetHeight;
             const scrollBottom = container.scrollTop + container.offsetHeight;
             if (offsetBottom > scrollBottom) {
-                console.log('scroll3');
+                // console.log('scroll3');
                 container.scrollTop = offsetBottom - container.offsetHeight;
             }
         }

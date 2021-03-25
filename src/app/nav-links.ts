@@ -3,7 +3,7 @@ export const navLinks = [
         id: 0,
         name: 'Dashboard',
         previewImage: '/Nav/DashboardIcon.png',
-        url: '',
+        url: 'dashboard',
         description: 'Create or edit your own builds, or view Featured Builds from community members.'
     },
     {
@@ -52,7 +52,7 @@ export const navLinks = [
         id: 100,
         name: 'Idleon Armory Tutorial',
         previewImage: '/Guides/Previews/tutorial.png',
-        url: 'guides/tutorial',
+        url: 'g/tutorial',
         description: 'How to use this site.'
     }
 ]

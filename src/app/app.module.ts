@@ -26,6 +26,7 @@ import { SidebarNavComponent } from './sidebar-nav/sidebar-nav.component';
 import { BlunderHillsComponent } from './blunder-hills/blunder-hills.component';
 import { YumYumDesertComponent } from './yum-yum-desert/yum-yum-desert.component';
 import { CardsComponent } from './cards/cards.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { CardsComponent } from './cards/cards.component';
     SidebarNavComponent,
     BlunderHillsComponent,
     YumYumDesertComponent,
-    CardsComponent
+    CardsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

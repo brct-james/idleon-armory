@@ -1,56 +1,58 @@
 @import './variables.sass'
 
-h1 
-	font-size: 3em 
-	line-height: 0.8em
-	margin: 0.25em
-	text-align: center
-	color: $main-red
-	font-family: ExpletusSans, Arial
-	font-weight: 700
-nav 
-	display: flex
-	flex-direction: row
-	justify-content: space-between
-	align-items: flex-end
-	border-bottom: solid $main-grey 1px
-	height: $nav-height
-	a 
-		margin-right: 1em
-		padding: 1em
-		display: block
-		text-decoration: none 
-		background-color: $hover-grey
-		color: $main-grey
-		font-weight: bold
-		border-radius: 4px 4px 0 0 
-		&.specialLink
-			background-color: $main-green
-			color: $main-white
-		&:hover 
-			color: $main-white
-			background-color: $main-grey 
-		&.active 
-			color: $main-white
-			background-color: $mid-grey
+h1
+    font-size: 3em
+    line-height: 0.8em
+    margin: 0.25em
+    text-align: center
+    color: $main-red
+    font-family: ExpletusSans, Arial
+    font-weight: 700
+nav
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-end
+    border-bottom: solid $main-grey 1px
+    height: $nav-height
+    a
+        margin-right: 1em
+        padding: 1em
+        display: block
+        text-decoration: none
+        color: $main-white
+        font-weight: bold
+        border-radius: 4px 4px 0 0
+        &#homeLink
+            background-color: $main-red
+        &#guidesLink
+            background-color: $main-green
+        &#buildsLink
+            background-color: $main-blue
+        &:hover
+            color: $main-white
+            background-color: $main-grey
+        &.active
+            color: $main-white
+            background-color: $mid-grey
 .navLinks
-	max-width: 98vw
-	display: flex
-	flex-direction: row
-	justify-content: center
-	align-items: center
+    max-width: 98vw
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
 @media(max-width: 758px)
-	nav
-		position: relative
-		margin-bottom: 60px
-		a
-			border-radius: 0 0 4px 4px 
-			padding: 0.5em
-			margin-right: 0.5em
-	.navLinks
-		position: absolute
-		top: 86px
-		width: 98vw
+    nav
+        position: relative
+        margin-bottom: 60px
+        a
+            border-radius: 0 0 4px 4px
+            padding: 0.5em
+            margin-right: 0.5em
+    .navLinks
+        position: absolute
+        top: 86px
+        width: 98vw
 @media(max-width: 645px)
-	.navLinks
-		top: 101px
+    .navLinks
+        top: 101px

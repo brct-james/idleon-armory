@@ -5,7 +5,7 @@
         id="{{'guide-'+guide.id}}"
         class="guidePreview noselect"
         [active]="guide.active"
-        routerLink="{{'/guides/'+guide.url}}"
+        routerLink="{{'/g/'+guide.url}}"
         [routerLinkActive]="['active']"
         [routerLinkActiveOptions]="{ exact: true }">
             <img src='{{ "assets/images/Guides/Previews/" + guide.previewImage}}' draggable="false"/>

@@ -17,17 +17,22 @@ import { YumYumDesertGuideComponent } from './guides/yum-yum-desert/yum-yum-dese
 import { BlunderHillsComponent } from './blunder-hills/blunder-hills.component';
 import { YumYumDesertComponent } from './yum-yum-desert/yum-yum-desert.component';
 import { CardsComponent } from './cards/cards.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent },
-  { path: 'character', component: CharacterInformationComponent },
-  { path: 'equipment', component: EquipmentComponent },
-  { path: 'talents', component: TalentsComponent },
-  { path: 'blunder-hills', component: BlunderHillsComponent },
-  { path: 'yum-yum-desert', component: YumYumDesertComponent },
-  { path: 'cards', component: CardsComponent },
-  { path: 'guides', redirectTo: 'guides/tutorial', pathMatch: 'full'},
-  { path: 'guides', children: [
+  { path: '', component: HomeComponent },
+  { path: 'b', redirectTo: 'b/dashboard', pathMatch: 'full'},
+  { path: 'b', children: [
+    { path: "dashboard", component: DashboardComponent },
+    { path: 'character', component: CharacterInformationComponent },
+    { path: 'equipment', component: EquipmentComponent },
+    { path: 'talents', component: TalentsComponent },
+    { path: 'blunder-hills', component: BlunderHillsComponent },
+    { path: 'yum-yum-desert', component: YumYumDesertComponent },
+    { path: 'cards', component: CardsComponent },
+  ]},
+  { path: 'g', redirectTo: 'g/tutorial', pathMatch: 'full'},
+  { path: 'g', children: [
     { path: "dailies", component: DailiesComponent },
     { path: "events", component: EventsComponent },
     { path: "gems", component: GemsComponent },

@@ -1,8 +1,9 @@
 <nav>
     <h1>{{title}}</h1>
     <div class="navLinks">
-        <a class="specialLink" routerLink="/guides" [routerLinkActive]="['active']">Guides</a>
-        <a routerLink="/" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Builds</a>
+        <a id="homeLink" routerLink="/" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        <a id="guidesLink" routerLink="/g" [routerLinkActive]="['active']">Guides</a>
+        <a id="buildsLink" routerLink="/b" [routerLinkActive]="['active']">Builds</a>
     </div>
     <app-character-selector></app-character-selector>
 </nav>

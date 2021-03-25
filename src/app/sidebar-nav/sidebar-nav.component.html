@@ -6,7 +6,7 @@
         class="navPreview noselect"
         [active]="navLink.active"
         [ngClass]="{'specialLink': navLink.id == 100}"
-        routerLink="{{'/'+navLink.url}}"
+        routerLink="{{ navLink.url.substr(0,2) == 'g/' ? '/' + navLink.url : '/b/' + navLink.url }}"
         [routerLinkActive]="['active']"
         [routerLinkActiveOptions]="{ exact: true }">
             <img src='{{ "assets/images/" + navLink.previewImage}}' draggable="false"/>
